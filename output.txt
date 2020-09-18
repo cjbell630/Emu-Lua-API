@@ -1,0 +1,52 @@
+emu.getdir: D:\fceux\ .. string
+emu.lagged: false .. boolean
+emu.readonly: true .. boolean
+emu.getscreenpixel: 0 .. number
+emu.emulating: true .. boolean
+emu.lagcount: 0 .. number
+emu.addgamegenie: true .. boolean
+emu.framecount: 33530 .. number
+emu.paused: false .. boolean
+emu.delgamegenie: true .. boolean
+emu.exec_count: 0 .. number
+rom.writebyte: 15 .. number
+rom.readbyte: 15 .. number
+rom.readbyteunsigned: 15 .. number
+rom.readbytesigned: 15 .. number
+rom.gethash: c554c5b9c42b1d64dafb98227bcda14f .. string
+
+
+
+loadrom: nil
+exec_time: BUGGED
+registerexit: nil
+lagged: bool
+readonly: bool
+lagcount: num
+unpause: nil
+print: nil
+getscreenpixel: 0 number
+message: nil
+getdir: string "D:\fceux\"
+setlagflag: nil
+registerafter: nil
+setrenderplanes: nil
+setreadonly: nil
+emulating: bool
+registerbefore: nil
+addgamegenie: bool
+frameadvance: nil
+poweron: nil
+framecount: 33530 number
+speedmode: nil
+delgamegenie: bool
+exec_count: number
+softreset: nil
+pause: nil
+paused: bool
+
+writebyte: number (written)
+readbyte: number
+gethash: string
+readbytesigned: number
+readbyteunsigned: number

@@ -3,8 +3,55 @@
 --- Created by cb106.
 --- DateTime: 9/17/2020 19:59
 ---
+funcs = {
+    --["emu.exec_time"] = emu.exec_time(1000, print), --BUGGED
+    --["rom.getfilename"] = rom.getfilename() --REMOVED
+}
 
-emu = require("emu")
-emu.lagged()
-emu.readonly()
-emu.getscreenpixel()
+--[[prop_form_funcs= {
+    ["emu.exec_count"] = emu.exec_count(1000, print("")),
+    ["emu.loadrom"] = emu.loadrom("string"),
+    ["emu.lagged"] = emu.lagged(),
+    ["emu.readonly"] = emu.readonly(),
+    ["emu.lagcount"] = emu.lagcount(),
+    ["emu.print"] = emu.print("string"),
+    ["emu.getscreenpixel"] = emu.getscreenpixel(15, 15, false),
+    ["emu.message"] = emu.message("string"),
+    ["emu.getdir"] = emu.getdir(),
+    ["emu.setlagflag"] = emu.setlagflag(true),
+    ["emu.setrenderplanes"] = emu.setrenderplanes(true, true),
+    ["emu.setreadonly"] = emu.setreadonly(true),
+    ["emu.emulating"] = emu.emulating(),
+    ["emu.addgamegenie"] = emu.addgamegenie("string"),
+    ["emu.frameadvance"] = emu.frameadvance(),
+    ["emu.poweron"] = emu.poweron(),
+    ["emu.pause"] = emu.pause(),
+    ["emu.registerexit"] = emu.registerexit(print),
+    ["emu.unpause"] = emu.unpause(),
+    ["emu.registerafter"] = emu.registerafter(print),
+    ["emu.registerbefore"] = emu.registerbefore(print),
+    ["emu.softreset"] = emu.softreset(),
+    ["emu.paused"] = emu.paused(),
+    ["emu.framecount"] = emu.framecount(),
+    ["emu.speedmode"] = emu.speedmode("normal"),
+    ["emu.delgamegenie"] = emu.delgamegenie("string"),
+    ["rom.readbyteunsigned"] = rom.readbyteunsigned(0xF0F),
+    ["rom.readbytesigned"] = rom.readbytesigned(0xF0F),
+    ["rom.writebyte"] = rom.writebyte(0xF0F, 0xD),
+    ["rom.readbyte"] = rom.readbyte(0xF0F),
+    ["rom.gethash"] = rom.gethash("md5")
+}]]--
+
+for k, v in pairs(rom) do
+    print(k)
+end
+
+for name, result in pairs(funcs) do
+    file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.txt", "a")
+    file:write(name)
+    file:write(": ")
+    file:write((result==nil) and "no return value" or tostring(result).." .. "..type(result))
+    file:write("\n")
+    file:close()
+end
+print("done")
