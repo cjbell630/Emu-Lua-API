@@ -2,7 +2,7 @@
 ---Some documentation for this document taken from http://fceux.com/web/help/fceux.html?LuaFunctionsList.html
 ---This document created by Connor Bell.
 ---@author Connor Bell
----@module memory contains functions for interacting with the memory.
+---@module memory Contains functions for interacting with the memory.
 memory = {}
 
 ---Get a single unsigned byte from the RAM at the given address.

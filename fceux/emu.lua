@@ -2,7 +2,7 @@
 ---Some documentation for this document taken from http://fceux.com/web/help/fceux.html?LuaFunctionsList.html
 ---This document created by Connor Bell.
 ---@author Connor Bell
----@module emu contains functions for interacting with the emulator.
+---@module emu Contains functions for interacting with the emulator.
 emu = {}
 
 ---Executes a power cycle.
@@ -221,20 +221,29 @@ end
 
 --TODO: I'm pretty sure this does the EXACT same thing as `print()`, except doesn't print to the lua console, if there is such a thing. test.
 ---Prints a message onto the Output Console area of the Lua Script control window.
----@param str string the message to print
+---@param str string The message to print
 function emu.print(str)
 end
 
 --TODO: Okay so it returns 4 numbers, but not a table. WHY????? Figure out how to get all of them into a table. Also figure out what return type to classify it as.
 --TODO: do this one
----Returns the separate RGB components of the given screen pixel, and the palette. Can be 0-255 by 0-239, but NTSC only displays 0-255 x 8-231 of it. If getemuscreen is false, this gets background colors from either the screen pixel or the LUA pixels set, but LUA data may not match the information used to put the data to the screen. If getemuscreen is true, this gets background colors from anything behind an LUA screen element.
----Usage is local r,g,b,palette = emu.getscreenpixel(5, 5, false) to retrieve the current red/green/blue colors and palette value of the pixel at 5x5.
+---Returns the separate RGB components of the given screen pixel, and the palette.
+---Can be 0-255 by 0-239, but NTSC only displays 0-255 x 8-231 of it.
 ---Palette value can be 0-63, or 254 if there was an error.
+---If getemuscreen is false, this gets background colors from either the screen pixel or the LUA pixels set, but LUA data may not match the information used to put the data to the screen.
+---If getemuscreen is true, this gets background colors from anything behind an LUA screen element.
+--->
+---Usage: `local r,g,b,palette = emu.getscreenpixel(5, 5, false)`
+---
+---You can also save all the values into a table like so:
+---
+---`local pixel = {emu.getscreenpixel(5, 5, false)}`
+--->
 ---You can avoid getting LUA data by putting the data into a function, and feeding the function name to emu.registerbefore.
----@param x number
----@param y number
+---@param x number The x position of the pixel to get the info from
+---@param y number The y position of the pixel to get the info from
 ---@param getemuscreen boolean
----@return (number, number, number, number) r, g, b, palette
+---@return number, number, number, number r, g, b, palette - Values of the specified pixel
 function emu.getscreenpixel(x, y, getemuscreen)
 end
 return emu
