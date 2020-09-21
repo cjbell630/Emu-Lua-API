@@ -6,10 +6,9 @@
 funcs = {
     --["emu.exec_time"] = emu.exec_time(1000, print), --BUGGED
     --["rom.getfilename"] = rom.getfilename() --REMOVED
-    ["memory.setregister"] = memory.setregister("pc", 0x200)
 }
 
-prop_form_funcs= {
+--[[prop_form_funcs= {
     ["emu.exec_count"] = emu.exec_count(1000, print("")),
     ["emu.loadrom"] = emu.loadrom("string"),
     ["emu.lagged"] = emu.lagged(),
@@ -65,8 +64,9 @@ prop_form_funcs= {
     ["memory.readwordunsigned"] = memory.readwordunsigned(0xF0F),
     ["memory.readwordunsigned 2 params"] = memory.readwordunsigned(0xF0F, 0xFFF),
     ["memory.readbytesigned"] = memory.readbytesigned(0xF0F),
-    ["memory.readbyteuunsigned"] = memory.readbyteunsigned(0xF0F)
-}
+    ["memory.readbyteuunsigned"] = memory.readbyteunsigned(0xF0F),
+    ["memory.setregister"] = memory.setregister("pc", 0x200)
+}]]
 
 --[[for k, v in pairs(memory) do
     print(k)
@@ -80,12 +80,9 @@ for name, result in pairs(funcs) do
     file:write("\n")
     file:close()
 end
-
-emu.readonly()
-memory.readbyte()
-memory.register()
-memory.registerexecute()
-memory.getregister()
-
-
+h = emu.getscreenpixel(5, 5, false)
+for i in h do
+    print(i)
+end
 print("done")
+

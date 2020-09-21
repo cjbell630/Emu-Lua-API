@@ -197,38 +197,44 @@ end
 function emu.registerexit(func)
 end
 
---TODO: is usage really necessary her of all places? either do it nowhere or everywhere I think.
---TODO: also format the return section
+--TODO: is usage really necessary here of all places? either do it nowhere or everywhere I think.
+--TODO: I am stupid and need to learn about Lua errors
 ---Adds a Game Genie code to the Cheats menu.
 ---Usage: emu.addgamegenie("NUTANT")
 ---Note that the Cheats Dialog Box won't show the code unless you close and reopen it.
----@param str string the Game Genie code to add.
----@return boolean Returns false and an error message if the code can't be decoded. Returns false if the code couldn't be added. Returns true if the code already existed, or if it was added.
+--->
+---**Throws** an error if the Game Genie code couldn't be decoded. This will stop the script so don't let it happen I guess. Idk much about Lua errors...
+---@param str string the Game Genie code to add
+---@return boolean true if the code was added, false if not
 function emu.addgamegenie(str)
 end
 
---TODO: do everythig from here down
----delgamegenie: Removes a Game Genie code from the Cheats menu. Returns false and an error message if the code can't be decoded. Returns false if the code couldn't be deleted. Returns true if the code didn't exist, or if it was deleted.
+---Removes a Game Genie code from the Cheats menu.
 ---Usage: emu.delgamegenie("NUTANT")
 ---Note that the Cheats Dialog Box won't show the code unless you close and reopen it.
----@param str string
----@return boolean
+--->
+---**Throws** an error if the Game Genie code couldn't be decoded. This will stop the script so don't let it happen I guess. Idk much about Lua errors...
+---@param str string the Game Genie code to delete
+---@return boolean true if the code is no longer there (deleted or was never there in the first place), false if the code couldn't be deleted
 function emu.delgamegenie(str)
 end
 
----print: Puts a message into the Output Console area of the Lua Script control window. Useful for displaying usage instructions to the user when a script gets run.
----@param str string
+--TODO: I'm pretty sure this does the EXACT same thing as `print()`, except doesn't print to the lua console, if there is such a thing. test.
+---Prints a message onto the Output Console area of the Lua Script control window.
+---@param str string the message to print
 function emu.print(str)
 end
 
----getscreenpixel: Returns the separate RGB components of the given screen pixel, and the palette. Can be 0-255 by 0-239, but NTSC only displays 0-255 x 8-231 of it. If getemuscreen is false, this gets background colors from either the screen pixel or the LUA pixels set, but LUA data may not match the information used to put the data to the screen. If getemuscreen is true, this gets background colors from anything behind an LUA screen element.
+--TODO: Okay so it returns 4 numbers, but not a table. WHY????? Figure out how to get all of them into a table. Also figure out what return type to classify it as.
+--TODO: do this one
+---Returns the separate RGB components of the given screen pixel, and the palette. Can be 0-255 by 0-239, but NTSC only displays 0-255 x 8-231 of it. If getemuscreen is false, this gets background colors from either the screen pixel or the LUA pixels set, but LUA data may not match the information used to put the data to the screen. If getemuscreen is true, this gets background colors from anything behind an LUA screen element.
 ---Usage is local r,g,b,palette = emu.getscreenpixel(5, 5, false) to retrieve the current red/green/blue colors and palette value of the pixel at 5x5.
 ---Palette value can be 0-63, or 254 if there was an error.
 ---You can avoid getting LUA data by putting the data into a function, and feeding the function name to emu.registerbefore.
 ---@param x number
 ---@param y number
 ---@param getemuscreen boolean
----@return number
+---@return (number, number, number, number) r, g, b, palette
 function emu.getscreenpixel(x, y, getemuscreen)
 end
 return emu
