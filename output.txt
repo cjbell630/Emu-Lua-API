@@ -1,64 +1,54 @@
-emu.getdir: D:\fceux\ .. string
-emu.lagged: false .. boolean
-emu.readonly: true .. boolean
-emu.getscreenpixel: 0 .. number
-emu.emulating: true .. boolean
-emu.lagcount: 0 .. number
-emu.addgamegenie: true .. boolean
-emu.framecount: 33530 .. number
-emu.paused: false .. boolean
-emu.delgamegenie: true .. boolean
-emu.exec_count: 0 .. number
-rom.writebyte: 15 .. number
-rom.readbyte: 15 .. number
-rom.readbyteunsigned: 15 .. number
-rom.readbytesigned: 15 .. number
-rom.gethash: c554c5b9c42b1d64dafb98227bcda14f .. string
-
-
-
-loadrom: nil
-exec_time: BUGGED
-registerexit: nil
-lagged: bool
-readonly: bool
-lagcount: num
-unpause: nil
-print: nil
-getscreenpixel: 0 number
-message: nil
-getdir: string "D:\fceux\"
-setlagflag: nil
-registerafter: nil
-setrenderplanes: nil
-setreadonly: nil
-emulating: bool
-registerbefore: nil
-addgamegenie: bool
-frameadvance: nil
-poweron: nil
-framecount: 33530 number
-speedmode: nil
-delgamegenie: bool
-exec_count: number
-softreset: nil
-pause: nil
-paused: bool
-
-writebyte: number (written)
-readbyte: number
-gethash: string
-readbytesigned: number
-readbyteunsigned: number
-
-memory.readwordunsigned: 44303 .. number
-memory.getregister: 41863 .. number
-memory.readword 2 params: 61199 .. number
-memory.readbytesigned: 15 .. number
-memory.readword: 44303 .. number
-memory.readwordunsigned 2 params: 61199 .. number
-memory.readwordsigned 2 params: -4337 .. number
-memory.readbyterange: �t .. string
-memory.readbyte: 15 .. number
-memory.readwordsigned: -21233 .. number
-memory.readbyteuunsigned: 15 .. number
+emu.paused: 1 .. number,
+emu.speedmode: 
+emu.lagcount: 1 .. number,  
+emu.exec_count: 1 .. number,  
+emu.registerbefore: 
+memory.getregister: 1 .. number,  
+emu.registerafter: 
+emu.frameadvance: 
+memory.readword 2 params: 1 .. number,  
+emu.loadrom: 
+emu.message: 
+memory.registerexecute: 
+emu.delgamegenie: 1 .. number,  
+emu.pause: 
+emu.softreset: 
+memory.readbyte: 1 .. number,  
+emu.emulating: 1 .. number,  
+memory.readwordsigned: 1 .. number,  
+emu.registerexit: 
+emu.setreadonly: 
+memory.readbyteuunsigned: 1 .. number,  
+memory.register: 
+emu.framecount: 1 .. number,  
+emu.lagged: 1 .. number,  
+memory.readwordunsigned: 1 .. number,  
+emu.setrenderplanes: 
+emu.readonly: 1 .. number,  
+memory.registerwrite 3 params: 
+memory.registerwrite: 
+memory.readwordsigned 2 params: 1 .. number,  
+memory.setregister: 
+memory.registerexecute 3 params: 
+memory.writebyte: 
+emu.unpause: 
+emu.print: 
+rom.readbyte: 1 .. number,  
+memory.readbytesigned: 1 .. number,  
+memory.readword: 1 .. number,  
+memory.readwordunsigned 2 params: 1 .. number,  
+memory.registerrun: 
+rom.readbytesigned: 1 .. number,  
+memory.registerexec: 
+memory.readbyterange: 1 .. number,  
+emu.getscreenpixel: 1 .. number,  2 .. number,  3 .. number,  4 .. number,  
+rom.gethash: 1 .. number,  
+memory.register 3 params: 
+emu.addgamegenie: 1 .. number,  
+rom.writebyte: 1 .. number,  
+memory.registerexec 3 params: 
+emu.poweron: 
+rom.readbyteunsigned: 1 .. number,  
+memory.registerrun 3 params: 
+emu.getdir: 1 .. number,  
+emu.setlagflag: 

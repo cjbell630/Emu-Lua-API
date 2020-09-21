@@ -3,86 +3,84 @@
 --- Created by cb106.
 --- DateTime: 9/17/2020 19:59
 ---
-funcs = {
-    --["emu.exec_time"] = emu.exec_time(1000, print), --BUGGED
-    --["rom.getfilename"] = rom.getfilename() --REMOVED
-}
-
---[[prop_form_funcs= {
-    ["emu.exec_count"] = emu.exec_count(1000, print("")),
-    ["emu.loadrom"] = emu.loadrom("string"),
-    ["emu.lagged"] = emu.lagged(),
-    ["emu.readonly"] = emu.readonly(),
-    ["emu.lagcount"] = emu.lagcount(),
-    ["emu.print"] = emu.print("string"),
-    ["emu.getscreenpixel"] = emu.getscreenpixel(15, 15, false),
-    ["emu.message"] = emu.message("string"),
-    ["emu.getdir"] = emu.getdir(),
-    ["emu.setlagflag"] = emu.setlagflag(true),
-    ["emu.setrenderplanes"] = emu.setrenderplanes(true, true),
-    ["emu.setreadonly"] = emu.setreadonly(true),
-    ["emu.emulating"] = emu.emulating(),
-    ["emu.addgamegenie"] = emu.addgamegenie("string"),
-    ["emu.frameadvance"] = emu.frameadvance(),
-    ["emu.poweron"] = emu.poweron(),
-    ["emu.pause"] = emu.pause(),
-    ["emu.registerexit"] = emu.registerexit(print),
-    ["emu.unpause"] = emu.unpause(),
-    ["emu.registerafter"] = emu.registerafter(print),
-    ["emu.registerbefore"] = emu.registerbefore(print),
-    ["emu.softreset"] = emu.softreset(),
-    ["emu.paused"] = emu.paused(),
-    ["emu.framecount"] = emu.framecount(),
-    ["emu.speedmode"] = emu.speedmode("normal"),
-    ["emu.delgamegenie"] = emu.delgamegenie("string"),
-
-    ["rom.readbyteunsigned"] = rom.readbyteunsigned(0xF0F),
-    ["rom.readbytesigned"] = rom.readbytesigned(0xF0F),
-    ["rom.writebyte"] = rom.writebyte(0xF0F, 0xD),
-    ["rom.readbyte"] = rom.readbyte(0xF0F),
-    ["rom.gethash"] = rom.gethash("md5"),
-
-
-    ["memory.writebyte"] = memory.writebyte(0xF0F, 15),
-    ["memory.registerexec"] = memory.registerexec(0xF0F, print),
-    ["memory.registerexec 3 params"] = memory.registerexec(0xF0F, 9, print),
-    ["memory.readbyte"] = memory.readbyte(0xF0F),
-    ["memory.registerrun"] = memory.registerrun(0xF0F, print),
-    ["memory.registerrun 3 params"] = memory.registerrun(0xF0F, 9, print),
-    ["memory.readword"] = memory.readword(0xF0F),
-    ["memory.readword 2 params"] = memory.readword(0xF0F, 0xFFF),
-    ["memory.getregister"] = memory.getregister("pc"),
-    ["memory.register"] = memory.register(0xF0F, print),
-    ["memory.register 3 params"] = memory.register(0xF0F, 9, print),
-    ["memory.registerexecute"] = memory.registerexecute(0xF0F, print),
-    ["memory.registerexecute 3 params"] = memory.registerexecute(0xF0F, 9, print),
-    ["memory.readbyterange"] = memory.readbyterange(0xF0F, 4),
-    ["memory.readwordsigned"] = memory.readwordsigned(0xF0F),
-    ["memory.readwordsigned 2 params"] = memory.readwordsigned(0xF0F, 0xFFF),
-    ["memory.registerwrite"] = memory.registerwrite(0xF0F, print),
-    ["memory.registerwrite 3 params"] = memory.registerwrite(0xF0F, 9, print),
-    ["memory.readwordunsigned"] = memory.readwordunsigned(0xF0F),
-    ["memory.readwordunsigned 2 params"] = memory.readwordunsigned(0xF0F, 0xFFF),
-    ["memory.readbytesigned"] = memory.readbytesigned(0xF0F),
-    ["memory.readbyteuunsigned"] = memory.readbyteunsigned(0xF0F),
-    ["memory.setregister"] = memory.setregister("pc", 0x200)
+--[[funcs = {{
+    --["emu.exec_time"] = {emu.exec_time(1000, print)}, --BUGGED
+    --["rom.getfilename"] = {rom.getfilename() --REMOVED
 }]]
+
+prop_form_funcs= {
+    ["emu.exec_count"] = {emu.exec_count(1000, print(""))},
+    ["emu.loadrom"] = {emu.loadrom("romname")},
+    ["emu.lagged"] = {emu.lagged()},
+    ["emu.readonly"] = {emu.readonly()},
+    ["emu.lagcount"] = {emu.lagcount()},
+    ["emu.print"] = {emu.print("string")},
+    ["emu.getscreenpixel"] = {emu.getscreenpixel(15, 15, true)},
+    ["emu.message"] = {emu.message("string")},
+    ["emu.getdir"] = {emu.getdir()},
+    ["emu.setlagflag"] = {emu.setlagflag(true)},
+    ["emu.setrenderplanes"] = {emu.setrenderplanes(true, true)},
+    ["emu.setreadonly"] = {emu.setreadonly(true)},
+    ["emu.emulating"] = {emu.emulating()},
+    ["emu.addgamegenie"] = {emu.addgamegenie("string")},
+    ["emu.frameadvance"] = {emu.frameadvance()},
+    ["emu.poweron"] = {emu.poweron()},
+    ["emu.pause"] = {emu.pause()},
+    ["emu.registerexit"] = {emu.registerexit(print)},
+    ["emu.unpause"] = {emu.unpause()},
+    ["emu.registerafter"] = {emu.registerafter(print)},
+    ["emu.registerbefore"] = {emu.registerbefore(print)},
+    ["emu.softreset"] = {emu.softreset()},
+    ["emu.paused"] = {emu.paused()},
+    ["emu.framecount"] = {emu.framecount()},
+    ["emu.speedmode"] = {emu.speedmode("normal")},
+    ["emu.delgamegenie"] = {emu.delgamegenie("string")},
+
+    ["rom.readbyteunsigned"] = {rom.readbyteunsigned(0xF0F)},
+    ["rom.readbytesigned"] = {rom.readbytesigned(0xF0F)},
+    ["rom.writebyte"] = {rom.writebyte(0xF0F, 0xD)},
+    ["rom.readbyte"] = {rom.readbyte(0xF0F)},
+    ["rom.gethash"] = {rom.gethash("md5")},
+
+
+    ["memory.writebyte"] = {memory.writebyte(0xF0F, 15)},
+    ["memory.registerexec"] = {memory.registerexec(0xF0F, print)},
+    ["memory.registerexec 3 params"] = {memory.registerexec(0xF0F, 9, print)},
+    ["memory.readbyte"] = {memory.readbyte(0xF0F)},
+    ["memory.registerrun"] = {memory.registerrun(0xF0F, print)},
+    ["memory.registerrun 3 params"] = {memory.registerrun(0xF0F, 9, print)},
+    ["memory.readword"] = {memory.readword(0xF0F)},
+    ["memory.readword 2 params"] = {memory.readword(0xF0F, 0xFFF)},
+    ["memory.getregister"] = {memory.getregister("pc")},
+    ["memory.register"] = {memory.register(0xF0F, print)},
+    ["memory.register 3 params"] = {memory.register(0xF0F, 9, print)},
+    ["memory.registerexecute"] = {memory.registerexecute(0xF0F, print)},
+    ["memory.registerexecute 3 params"] = {memory.registerexecute(0xF0F, 9, print)},
+    ["memory.readbyterange"] = {memory.readbyterange(0xF0F, 4)},
+    ["memory.readwordsigned"] = {memory.readwordsigned(0xF0F)},
+    ["memory.readwordsigned 2 params"] = {memory.readwordsigned(0xF0F, 0xFFF)},
+    ["memory.registerwrite"] = {memory.registerwrite(0xF0F, print)},
+    ["memory.registerwrite 3 params"] = {memory.registerwrite(0xF0F, 9, print)},
+    ["memory.readwordunsigned"] = {memory.readwordunsigned(0xF0F)},
+    ["memory.readwordunsigned 2 params"] = {memory.readwordunsigned(0xF0F, 0xFFF)},
+    ["memory.readbytesigned"] = {memory.readbytesigned(0xF0F)},
+    ["memory.readbyteuunsigned"] = {memory.readbyteunsigned(0xF0F)},
+    ["memory.setregister"] = {memory.setregister("pc", 0x200)}
+}
 
 --[[for k, v in pairs(memory) do
     print(k)
 end]]--
 
-for name, result in pairs(funcs) do
+for name, result in pairs(prop_form_funcs) do
     file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.txt", "a")
     file:write(name)
     file:write(": ")
-    file:write((result == nil) and "no return value" or tostring(result) .. " .. " .. type(result))
+    for i, _ in pairs(result) do
+        file:write((i == nil) and "no return value" or tostring(i) .. " .. " .. type(i)..",  ")
+    end
     file:write("\n")
     file:close()
-end
-h = emu.getscreenpixel(5, 5, false)
-for i in h do
-    print(i)
 end
 print("done")
 
