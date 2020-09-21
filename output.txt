@@ -50,3 +50,15 @@ readbyte: number
 gethash: string
 readbytesigned: number
 readbyteunsigned: number
+
+memory.readwordunsigned: 44303 .. number
+memory.getregister: 41863 .. number
+memory.readword 2 params: 61199 .. number
+memory.readbytesigned: 15 .. number
+memory.readword: 44303 .. number
+memory.readwordunsigned 2 params: 61199 .. number
+memory.readwordsigned 2 params: -4337 .. number
+memory.readbyterange: �t .. string
+memory.readbyte: 15 .. number
+memory.readwordsigned: -21233 .. number
+memory.readbyteuunsigned: 15 .. number
