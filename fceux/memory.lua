@@ -2,6 +2,7 @@
 ---Some documentation for this document taken from http://fceux.com/web/help/fceux.html?LuaFunctionsList.html
 ---This document created by Connor Bell.
 ---@author Connor Bell
+---@alias CPURegister string | '"a"' | '"x"' | '"y"' | '"s"' | '"p"' | '"pc"'
 ---@module memory Contains functions for interacting with the memory.
 memory = {}
 
@@ -103,7 +104,6 @@ end
 --->
 ---**Accepted values for `cpuregistername` are:**
 --->    `CPURegister = {"a", "x", "y", "s", "p", "pc"}`
----@alias CPURegister string | '"a"' | '"x"' | '"y"' | '"s"' | '"p"' | '"pc"'
 ---@param cpuregistername CPURegister The name of the CPU register to get the value of (see above for accepted names)
 ---@return number The value of the specified CPU register
 function memory.getregister(cpuregistername)
@@ -120,7 +120,6 @@ end
 ---**IMPORTANT:**
 ---You had better know exactly what you're doing or you're probably just going to crash the game if you try to use this function.
 ---That applies to the other memory.write functions as well, but to a lesser extent.
----@alias CPURegister string | '"a"' | '"x"' | '"y"' | '"s"' | '"p"' | '"pc"'
 ---@param cpuregistername CPURegister The name of the CPU register to change (see above for accepted names)
 ---@param value number The value to set the specified CPU register to
 function memory.setregister(cpuregistername, value)

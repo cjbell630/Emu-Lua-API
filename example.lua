@@ -3,10 +3,20 @@
 --- Created by cb106.
 --- DateTime: 9/17/2020 19:59
 ---
---[[funcs = {{
+funcs = {
     --["emu.exec_time"] = {emu.exec_time(1000, print)}, --BUGGED
-    --["rom.getfilename"] = {rom.getfilename() --REMOVED
-}]]
+    --["rom.getfilename"] = {rom.getfilename()} --REMOVED
+    ["joypad.get"] = { joypad.get(1) },
+    ["joypad.getdown"] = { joypad.getdown(1) },
+    ["joypad.getimmediate"] = { joypad.getimmediate(1) },
+    ["joypad.getup"] = { joypad.getup(1) },
+    ["joypad.read"] = { joypad.read(1) },
+    ["joypad.readdown"] = { joypad.readdown(1) },
+    ["joypad.readimmediate"] = { joypad.readimmediate(1) },
+    ["joypad.readup"] = { joypad.readup(1) },
+    ["joypad.set"] = { joypad.set(1, {A=true}) },
+    ["joypad.write"] = { joypad.write(1,{A=true}) }
+}
 
 --[[funcs = {
     ["emu.exec_count"] = { emu.exec_count(1000, print("")) },
@@ -64,13 +74,18 @@
     ["memory.readwordunsigned 2 params"] = { memory.readwordunsigned(0xF0F, 0xFFF) },
     ["memory.readbytesigned"] = { memory.readbytesigned(0xF0F) },
     ["memory.readbyteuunsigned"] = { memory.readbyteunsigned(0xF0F) },
-    ["memory.setregister"] = { memory.setregister("pc", 0x200) }
+    ["memory.setregister"] = { memory.setregister("pc", 0x200) },
+
+    ["debugger.getcyclescount"] = { debugger.getcyclescount() },
+    ["debugger.getinstructionscount"] = { debugger.getinstructionscount() },
+    ["debugger.hitbreakpoint"] = { debugger.hitbreakpoint() },
+    ["debugger.resetcyclescount"] = { debugger.resetcyclescount() },
+    ["debugger.resetinstructionscount"] = { debugger.resetinstructionscount() }
 }]]
 
---[[for k, v in pairs(memory) do
+--[[for k, v in pairs(joypad) do
     print(k)
-end]]--
-
+end]]
 file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.html", "w+")
 file:write("<html><head><style>table {border-collapse: collapse;width: 100%;border: 1px solid black;}th, td {text-align: left;padding: 8px;border: 1px solid black;}tr:nth-child(even) {background-color: #d0d0d0;border: 1px solid black;}</style></head><body><table style=\"width:100%\">")
 file:close()
@@ -90,5 +105,14 @@ for name, result in pairs(funcs) do
 end
 file:write("</table></body></html>")
 file:close()
+
+for k, v in pairs(joypad.get(1)) do
+    print(tostring(k)..": "..tostring(type(k)).."\n")
+    print(tostring(v)..": "..tostring(type(v)).."\n\n")
+end
+print(joypad.get(1)["A"])
+print(joypad.get(1)["27"])
+joypad.set(1, {A=true})
+emu.frameadvance()
 print("done")
 
