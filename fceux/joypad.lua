@@ -16,24 +16,32 @@ joypad = {}
 ---joypad.read left in for backwards compatibility with older versions of FCEU/FCEUX.
 ---@param player number The player number to get the input of
 ---@return table<ButtonName, ButtonState>
-function joypad.get(player) end
-function joypad.read(player) end
+function joypad.get(player)
+end
+function joypad.read(player)
+end
 
 ---Returns a table of every game button, where each entry is true if that button is held at the moment of calling the function, or false if it is not held. This function polls keyboard input immediately, allowing Lua to interact with user even when emulator is paused.
 ---As of FCEUX 2.2.0, the function only works in Windows. In Linux this function will return nil.
 ---@param player number The player number to get the input of
-function joypad.getimmediate(player) end
-function joypad.readimmediate(player) end
+function joypad.getimmediate(player)
+end
+function joypad.readimmediate(player)
+end
 
 ---Returns a table of only the game buttons that are currently held. Each entry is true if that button is currently held (as of the last time the emulation checked), or nil if it is not held.
 ---@param player number The player number to get the input of
-function joypad.getdown(player) end
-function joypad.readdown(player) end
+function joypad.getdown(player)
+end
+function joypad.readdown(player)
+end
 
 ---Returns a table of only the game buttons that are not currently held. Each entry is nil if that button is currently held (as of the last time the emulation checked), or false if it is not held.
 ---@param player number The player number to get the input of
-function joypad.getup(player) end
-function joypad.readup(player) end
+function joypad.getup(player)
+end
+function joypad.readup(player)
+end
 
 ---Set the inputs for the given player. Table keys look like this (case sensitive):
 ---up, down, left, right, A, B, start, select
@@ -47,7 +55,9 @@ function joypad.readup(player) end
 ---joypad.write left in for backwards compatibility with older versions of FCEU/FCEUX.
 ---@param player number The player number to set the input of
 ---@param input table<ButtonName, ButtonState> The table to set the input to
-function joypad.set(player, input) end
-function joypad.write(player, input) end
+function joypad.set(player, input)
+end
+function joypad.write(player, input)
+end
 
 return joypad
