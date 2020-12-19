@@ -3,7 +3,7 @@
 ---This document created by Connor Bell.
 ---@author Connor Bell
 ---@alias bit number | 0 | 1
----@module zapper Contains functions for interacting with the joypad.
+---@module zapper Contains functions for interacting with the Zapper.
 zapper = {}
 
 --TODO
