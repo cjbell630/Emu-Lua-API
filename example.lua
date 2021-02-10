@@ -1,11 +1,24 @@
 funcs = {
     --["emu.exec_time"] = {emu.exec_time(1000, print)}, --BUGGED
     --["rom.getfilename"] = {rom.getfilename()} --REMOVED
-    ["input.read"] = { input.read() },
-    ["input.popup"] = { input.popup("string1") },
-    ["input.openfilepopup"] = { input.openfilepopup() },
-    ["input.savefilepopup"] = { input.savefilepopup() },
-    ["input.get"] = { input.get() }
+    ["savestate.object"] = { savestate.object(1) },
+    ["savestate.create"] = { savestate.create(1) },
+    --["savestate.save"] = { savestate.save() },
+    --["savestate.load"] = { savestate.load() },
+    --["savestate.persist"] = { savestate.persist() },
+    ["savestate.registersave"] = { savestate.registersave() },
+    ["savestate.registerload"] = { savestate.registerload() },
+    --["savestate.loadscriptdata"] = { savestate.loadscriptdata() } might be savestate obj instead
+    --[[
+registerload
+loadscriptdata
+object
+registersave
+load
+save
+create
+persist
+]]--
 }
 
 --[[funcs = {
@@ -73,7 +86,7 @@ funcs = {
     ["debugger.resetinstructionscount"] = { debugger.resetinstructionscount() }
 }]]
 
-for k, v in pairs(input) do
+for k, v in pairs(savestate) do
     print(k)
 end
 file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.html", "w+")
@@ -100,6 +113,8 @@ for k, v in pairs(joypad.get(1)) do
     print(tostring(k) .. ": " .. tostring(type(k)) .. "\n")
     print(tostring(v) .. ": " .. tostring(type(v)) .. "\n\n")
 end
+joypad.get()
+savestate.object()
 
 emu.frameadvance()
 print("done")
