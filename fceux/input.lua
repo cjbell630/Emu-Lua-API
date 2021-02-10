@@ -19,12 +19,32 @@ input = {}
 ---numpad0, numpad1, numpad2, numpad3, numpad4, numpad5, numpad6, numpad7, numpad8, numpad9, numpad*,
 ---insert, delete, numpad+, numpad-, numpad., numpad/, semicolon, plus, minus,
 ---comma, period, slash, backslash, tilde, quote, leftbracket, rightbracket.
----@return table<number, number, bit>
+---@return table<string, number | boolean>
 function input.get()
 end
 function input.read()
 end
 
+--TODO: doc
+---OG DOC:
+---Requests input from the user using a multiple-option message box. See gui.popup for complete usage and returns.
+---@alias BoolString string | '"yes"' | '"no"'
+---@param boxText string The string to display to the user in the box
+---@return BoolString The text in the box selected by the user ("yes" or "no")
+function input.popup(boxText)
+end
 
---openfilepopup
---savefilepopup
+--TODO: doc
+---Opens a file select box for the user to choose a file with.
+---Returns the path(s) of the chosen file(s).
+---@return table<string> A table containing the path(s) to the file(s) selected by the user
+function input.openfilepopup()
+end
+
+--TODO: doc
+---Opens a file select box for the user to choose a file with.
+---Returns the path(s) of the chosen file(s).
+---Exactly the same as {@link input.openfilepopup} except it says "Save" instead of "Open".
+---@return table<string> A table containing the path(s) to the file(s) selected by the user
+function input.savefilepopup()
+end

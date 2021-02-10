@@ -2,9 +2,10 @@ funcs = {
     --["emu.exec_time"] = {emu.exec_time(1000, print)}, --BUGGED
     --["rom.getfilename"] = {rom.getfilename()} --REMOVED
     ["input.read"] = { input.read() },
-    ["input.popup"] = { input.popup("string") },
+    ["input.popup"] = { input.popup("string1") },
     ["input.openfilepopup"] = { input.openfilepopup() },
-    ["input.savefilepopup"] = { input.savefilepopup() }
+    ["input.savefilepopup"] = { input.savefilepopup() },
+    ["input.get"] = { input.get() }
 }
 
 --[[funcs = {
