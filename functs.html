@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+	table, th, td {border: 1px solid black;}
+	table tr:nth-child(even) {background-color: #C4C4C4;}
+	table tr:nth-child(odd) {background-color:#EFEFEF;}
+</style>
+</head><body>
+<div id='toc'><p></p></div>
+<table><tr><th colspan='3'>* Modules Found * Lua Ver. Lua 5.1</th></tr>
+	<tr>
+		<td><a href='#_G'style='display:block;text-decoration: none'>_G</a></td>
+		<td><a href='#_G.FCEU'style='display:block;text-decoration: none'>_G.FCEU</a></td>
+		<td><a href='#_G.bit'style='display:block;text-decoration: none'>_G.bit</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.debugger'style='display:block;text-decoration: none'>_G.debugger</a></td>
+		<td><a href='#_G.emu'style='display:block;text-decoration: none'>_G.emu</a></td>
+		<td><a href='#_G.gui'style='display:block;text-decoration: none'>_G.gui</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.input'style='display:block;text-decoration: none'>_G.input</a></td>
+		<td><a href='#_G.iup'style='display:block;text-decoration: none'>_G.iup</a></td>
+		<td><a href='#_G.joypad'style='display:block;text-decoration: none'>_G.joypad</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.memory'style='display:block;text-decoration: none'>_G.memory</a></td>
+		<td><a href='#_G.movie'style='display:block;text-decoration: none'>_G.movie</a></td>
+		<td><a href='#_G.rom'style='display:block;text-decoration: none'>_G.rom</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.savestate'style='display:block;text-decoration: none'>_G.savestate</a></td>
+		<td><a href='#_G.sound'style='display:block;text-decoration: none'>_G.sound</a></td>
+		<td><a href='#_G.taseditor'style='display:block;text-decoration: none'>_G.taseditor</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.winapi'style='display:block;text-decoration: none'>_G.winapi</a></td>
+		<td><a href='#_G.zapper'style='display:block;text-decoration: none'>_G.zapper</a></td>
+	</tr>
+</table>
+<BR /><b> [Datatypes:   [n] = number  [nil] = nil  [u] = userdata  [t] = table  [s] = string  [f] = function  [b] = boolean  [thr] = thread] </b><BR /><BR /><BR /><BR /><BR /><BR /><div id='_G'style='color:#0000FF'><h3>Module: _G</h3></div>
+<table><tr><th colspan='6'>_G</th></tr>
+	<tr>
+		<td><a> [f] AND</a></td>
+		<td><a> [f] BIT</a></td>
+		<td><a> [f] OR</a></td>
+		<td><a> [f] SHIFT</a></td>
+		<td><a> [f] XOR</a></td>
+		<td><a> [f] addressof</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] copytable</a></td>
+		<td><a> [f] gcinfo</a></td>
+		<td><a> [f] getfenv</a></td>
+		<td><a> [f] gethash</a></td>
+		<td><a> [f] loadstring</a></td>
+		<td><a> [f] module</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] newproxy</a></td>
+		<td><a> [f] setfenv</a></td>
+		<td><a> [f] setmetatable</a></td>
+		<td><a> [f] tmp</a></td>
+		<td><a> [f] tobitstring</a></td>
+		<td><a> [f] unpack</a></td>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [s] _VERSION : Lua 5.1</td><tr>
+		</tr><td colspan='6'> [s] arg : </td><tr>
+		<td><a> [t] FCEU</a></td>
+		<td><a> [t] _G</a></td>
+		<td><a> [t] bit</a></td>
+		<td><a> [t] coroutine</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] debug</a></td>
+		<td><a> [t] debugger</a></td>
+		<td><a> [t] emu</a></td>
+		<td><a> [t] gui</a></td>
+		<td><a> [t] input</a></td>
+		<td><a> [t] io</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] iup</a></td>
+		<td><a> [t] joypad</a></td>
+		<td><a> [t] math</a></td>
+		<td><a> [t] memory</a></td>
+		<td><a> [t] movie</a></td>
+		<td><a> [t] os</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] package</a></td>
+		<td><a> [t] rom</a></td>
+		<td><a> [t] savestate</a></td>
+		<td><a> [t] sound</a></td>
+		<td><a> [t] string</a></td>
+		<td><a> [t] table</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] taseditor</a></td>
+		<td><a> [t] winapi</a></td>
+		<td><a> [t] zapper</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.FCEU'style='color:#0000FF'><h3>Module: _G.FCEU</h3></div>
+<table><tr><th colspan='6'>_G.FCEU</th></tr>
+	<tr>
+		<td><a> [f] addgamegenie</a></td>
+		<td><a> [f] delgamegenie</a></td>
+		<td><a> [f] emulating</a></td>
+		<td><a> [f] exec_count</a></td>
+		<td><a> [f] exec_time</a></td>
+		<td><a> [f] frameadvance</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] framecount</a></td>
+		<td><a> [f] getdir</a></td>
+		<td><a> [f] getscreenpixel</a></td>
+		<td><a> [f] lagcount</a></td>
+		<td><a> [f] lagged</a></td>
+		<td><a> [f] loadrom</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] message</a></td>
+		<td><a> [f] pause</a></td>
+		<td><a> [f] paused</a></td>
+		<td><a> [f] poweron</a></td>
+		<td><a> [f] readonly</a></td>
+		<td><a> [f] registerafter</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] registerbefore</a></td>
+		<td><a> [f] registerexit</a></td>
+		<td><a> [f] setlagflag</a></td>
+		<td><a> [f] setreadonly</a></td>
+		<td><a> [f] setrenderplanes</a></td>
+		<td><a> [f] softreset</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] speedmode</a></td>
+		<td><a> [f] unpause</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.bit'style='color:#0000FF'><h3>Module: _G.bit</h3></div>
+<table><tr><th colspan='6'>_G.bit</th></tr>
+	<tr>
+		<td><a> [f] arshift</a></td>
+		<td><a> [f] band</a></td>
+		<td><a> [f] bnot</a></td>
+		<td><a> [f] bor</a></td>
+		<td><a> [f] bswap</a></td>
+		<td><a> [f] bxor</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] lshift</a></td>
+		<td><a> [f] rol</a></td>
+		<td><a> [f] ror</a></td>
+		<td><a> [f] rshift</a></td>
+		<td><a> [f] tobit</a></td>
+		<td><a> [f] tohex</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.debugger'style='color:#0000FF'><h3>Module: _G.debugger</h3></div>
+<table><tr><th colspan='6'>_G.debugger</th></tr>
+	<tr>
+		<td><a> [f] getcyclescount</a></td>
+		<td><a> [f] getinstructionscount</a></td>
+		<td><a> [f] hitbreakpoint</a></td>
+		<td><a> [f] resetcyclescount</a></td>
+		<td><a> [f] resetinstructionscount</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.emu'style='color:#0000FF'><h3>Module: _G.emu</h3></div>
+<table><tr><th colspan='6'>_G.emu</th></tr>
+	<tr>
+		<td><a> [f] addgamegenie</a></td>
+		<td><a> [f] delgamegenie</a></td>
+		<td><a> [f] emulating</a></td>
+		<td><a> [f] exec_count</a></td>
+		<td><a> [f] exec_time</a></td>
+		<td><a> [f] frameadvance</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] framecount</a></td>
+		<td><a> [f] getdir</a></td>
+		<td><a> [f] getscreenpixel</a></td>
+		<td><a> [f] lagcount</a></td>
+		<td><a> [f] lagged</a></td>
+		<td><a> [f] loadrom</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] message</a></td>
+		<td><a> [f] pause</a></td>
+		<td><a> [f] paused</a></td>
+		<td><a> [f] poweron</a></td>
+		<td><a> [f] readonly</a></td>
+		<td><a> [f] registerafter</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] registerbefore</a></td>
+		<td><a> [f] registerexit</a></td>
+		<td><a> [f] setlagflag</a></td>
+		<td><a> [f] setreadonly</a></td>
+		<td><a> [f] setrenderplanes</a></td>
+		<td><a> [f] softreset</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] speedmode</a></td>
+		<td><a> [f] unpause</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.gui'style='color:#0000FF'><h3>Module: _G.gui</h3></div>
+<table><tr><th colspan='6'>_G.gui</th></tr>
+	<tr>
+		<td><a> [f] box</a></td>
+		<td><a> [f] drawbox</a></td>
+		<td><a> [f] drawimage</a></td>
+		<td><a> [f] drawline</a></td>
+		<td><a> [f] drawpixel</a></td>
+		<td><a> [f] drawrect</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] drawtext</a></td>
+		<td><a> [f] gdoverlay</a></td>
+		<td><a> [f] gdscreenshot</a></td>
+		<td><a> [f] getpixel</a></td>
+		<td><a> [f] image</a></td>
+		<td><a> [f] line</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] opacity</a></td>
+		<td><a> [f] parsecolor</a></td>
+		<td><a> [f] pixel</a></td>
+		<td><a> [f] popup</a></td>
+		<td><a> [f] rect</a></td>
+		<td><a> [f] register</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] savescreenshot</a></td>
+		<td><a> [f] savescreenshotas</a></td>
+		<td><a> [f] setpixel</a></td>
+		<td><a> [f] text</a></td>
+		<td><a> [f] transparency</a></td>
+		<td><a> [f] writepixel</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.input'style='color:#0000FF'><h3>Module: _G.input</h3></div>
+<table><tr><th colspan='6'>_G.input</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+		<td><a> [f] openfilepopup</a></td>
+		<td><a> [f] popup</a></td>
+		<td><a> [f] read</a></td>
+		<td><a> [f] savefilepopup</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup'style='color:#0000FF'><h3>Module: _G.iup</h3></div>
+<table><tr><th colspan='6'>_G.iup</th></tr>
+	<tr>
+		<td><a> [f] Alarm</a></td>
+		<td><a> [f] Append</a></td>
+		<td><a> [f] Button</a></td>
+		<td><a> [f] Canvas</a></td>
+		<td><a> [f] Cboxv</a></td>
+		<td><a> [f] Cells</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Clipboard</a></td>
+		<td><a> [f] Close</a></td>
+		<td><a> [f] ColorBrowser</a></td>
+		<td><a> [f] ColorDlg</a></td>
+		<td><a> [f] Colorbar</a></td>
+		<td><a> [f] ConvertXYToPos</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Destroy</a></td>
+		<td><a> [f] Detach</a></td>
+		<td><a> [f] Dial</a></td>
+		<td><a> [f] Dialog</a></td>
+		<td><a> [f] ExitLoop</a></td>
+		<td><a> [f] FileDlg</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Fill</a></td>
+		<td><a> [f] Flush</a></td>
+		<td><a> [f] FontDlg</a></td>
+		<td><a> [f] Frame</a></td>
+		<td><a> [f] Gauge</a></td>
+		<td><a> [f] GetAllAttributes</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] GetAllDialogs</a></td>
+		<td><a> [f] GetAllNames</a></td>
+		<td><a> [f] GetAttribute</a></td>
+		<td><a> [f] GetAttributeData</a></td>
+		<td><a> [f] GetAttributes</a></td>
+		<td><a> [f] GetBrother</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] GetChildCount</a></td>
+		<td><a> [f] GetChildPos</a></td>
+		<td><a> [f] GetClassAttributes</a></td>
+		<td><a> [f] GetClassName</a></td>
+		<td><a> [f] GetClassType</a></td>
+		<td><a> [f] GetColor</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] GetDialog</a></td>
+		<td><a> [f] GetDialogChild</a></td>
+		<td><a> [f] GetFile</a></td>
+		<td><a> [f] GetFocus</a></td>
+		<td><a> [f] GetFromC</a></td>
+		<td><a> [f] GetGlobal</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] GetHandle</a></td>
+		<td><a> [f] GetLanguage</a></td>
+		<td><a> [f] GetName</a></td>
+		<td><a> [f] GetNextChild</a></td>
+		<td><a> [f] GetParam</a></td>
+		<td><a> [f] GetParamParam</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] GetParent</a></td>
+		<td><a> [f] GetText</a></td>
+		<td><a> [f] Hbox</a></td>
+		<td><a> [f] Help</a></td>
+		<td><a> [f] Hide</a></td>
+		<td><a> [f] IUPxCODE</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Image</a></td>
+		<td><a> [f] ImageRGB</a></td>
+		<td><a> [f] ImageRGBA</a></td>
+		<td><a> [f] Insert</a></td>
+		<td><a> [f] Item</a></td>
+		<td><a> [f] Label</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] List</a></td>
+		<td><a> [f] ListDialog</a></td>
+		<td><a> [f] Load</a></td>
+		<td><a> [f] LoadBuffer</a></td>
+		<td><a> [f] LoopStep</a></td>
+		<td><a> [f] MainLoop</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] MainLoopLevel</a></td>
+		<td><a> [f] Map</a></td>
+		<td><a> [f] MapFont</a></td>
+		<td><a> [f] Matrix</a></td>
+		<td><a> [f] Menu</a></td>
+		<td><a> [f] Message</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] MessageDlg</a></td>
+		<td><a> [f] MultiLine</a></td>
+		<td><a> [f] NextField</a></td>
+		<td><a> [f] Normalizer</a></td>
+		<td><a> [f] Open</a></td>
+		<td><a> [f] Popup</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] PreviousField</a></td>
+		<td><a> [f] ProgressBar</a></td>
+		<td><a> [f] RGB</a></td>
+		<td><a> [f] Radio</a></td>
+		<td><a> [f] Redraw</a></td>
+		<td><a> [f] Refresh</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] RegisterCallback</a></td>
+		<td><a> [f] RegisterHandle</a></td>
+		<td><a> [f] Reparent</a></td>
+		<td><a> [f] SaveImageAsText</a></td>
+		<td><a> [f] Sbox</a></td>
+		<td><a> [f] Scanf</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Separator</a></td>
+		<td><a> [f] SetAttribute</a></td>
+		<td><a> [f] SetAttributes</a></td>
+		<td><a> [f] SetClassDefaultAttribute</a></td>
+		<td><a> [f] SetFocus</a></td>
+		<td><a> [f] SetGlobal</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] SetHandle</a></td>
+		<td><a> [f] SetIdle</a></td>
+		<td><a> [f] SetLanguage</a></td>
+		<td><a> [f] Show</a></td>
+		<td><a> [f] ShowXY</a></td>
+		<td><a> [f] Spin</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] Spinbox</a></td>
+		<td><a> [f] StoreAttribute</a></td>
+		<td><a> [f] StoreGlobal</a></td>
+		<td><a> [f] Submenu</a></td>
+		<td><a> [f] Tabsv</a></td>
+		<td><a> [f] Text</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] TextConvertLinColToPos</a></td>
+		<td><a> [f] TextConvertPosToLinCol</a></td>
+		<td><a> [f] Timer</a></td>
+		<td><a> [f] Toggle</a></td>
+		<td><a> [f] Tree</a></td>
+		<td><a> [f] TreeGetId</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] TreeGetTable</a></td>
+		<td><a> [f] TreeGetTableId</a></td>
+		<td><a> [f] TreeGetUserId</a></td>
+		<td><a> [f] TreeSetNodeAttrib</a></td>
+		<td><a> [f] TreeSetTableId</a></td>
+		<td><a> [f] TreeSetUserId</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] TreeSetValue</a></td>
+		<td><a> [f] TreeSetValueRec</a></td>
+		<td><a> [f] UnMapFont</a></td>
+		<td><a> [f] Unmap</a></td>
+		<td><a> [f] Update</a></td>
+		<td><a> [f] UpdateChildren</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] User</a></td>
+		<td><a> [f] Val</a></td>
+		<td><a> [f] Vbox</a></td>
+		<td><a> [f] Version</a></td>
+		<td><a> [f] VersionNumber</a></td>
+		<td><a> [f] Zbox</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] _ERRORMESSAGE</a></td>
+		<td><a> [f] button</a></td>
+		<td><a> [f] canvas</a></td>
+		<td><a> [f] cbox</a></td>
+		<td><a> [f] cells</a></td>
+		<td><a> [f] clipboard</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] colorbar</a></td>
+		<td><a> [f] colorbrowser</a></td>
+		<td><a> [f] colordlg</a></td>
+		<td><a> [f] dial</a></td>
+		<td><a> [f] dialog</a></td>
+		<td><a> [f] dostring</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] filedlg</a></td>
+		<td><a> [f] fill</a></td>
+		<td><a> [f] fontdlg</a></td>
+		<td><a> [f] frame</a></td>
+		<td><a> [f] gauge</a></td>
+		<td><a> [f] hbox</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] ihandle_compare</a></td>
+		<td><a> [f] ihandle_setname</a></td>
+		<td><a> [f] ihandle_tostring</a></td>
+		<td><a> [f] image</a></td>
+		<td><a> [f] imagergb</a></td>
+		<td><a> [f] imagergba</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] isAltXkey</a></td>
+		<td><a> [f] isCtrlXkey</a></td>
+		<td><a> [f] isShiftXkey</a></td>
+		<td><a> [f] isSysXkey</a></td>
+		<td><a> [f] isXkey</a></td>
+		<td><a> [f] isalt</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] isbutton1</a></td>
+		<td><a> [f] isbutton2</a></td>
+		<td><a> [f] isbutton3</a></td>
+		<td><a> [f] isbutton4</a></td>
+		<td><a> [f] isbutton5</a></td>
+		<td><a> [f] iscontrol</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] isdouble</a></td>
+		<td><a> [f] isprint</a></td>
+		<td><a> [f] isshift</a></td>
+		<td><a> [f] issys</a></td>
+		<td><a> [f] isxkey</a></td>
+		<td><a> [f] item</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] iupCallMethod</a></td>
+		<td><a> [f] iupGetClass</a></td>
+		<td><a> [f] iupGetWidget</a></td>
+		<td><a> [f] iupNewClass</a></td>
+		<td><a> [f] iupRegisterWidget</a></td>
+		<td><a> [f] iupSetCallback</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] iupSetClass</a></td>
+		<td><a> [f] iupSetMethod</a></td>
+		<td><a> [f] iupSetWidget</a></td>
+		<td><a> [f] key_open</a></td>
+		<td><a> [f] label</a></td>
+		<td><a> [f] list</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] maskCheck</a></td>
+		<td><a> [f] maskMatCheck</a></td>
+		<td><a> [f] maskMatRemove</a></td>
+		<td><a> [f] maskMatSet</a></td>
+		<td><a> [f] maskMatSetFloat</a></td>
+		<td><a> [f] maskMatSetInt</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] maskRemove</a></td>
+		<td><a> [f] maskSet</a></td>
+		<td><a> [f] maskSetFloat</a></td>
+		<td><a> [f] maskSetInt</a></td>
+		<td><a> [f] matrix</a></td>
+		<td><a> [f] menu</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] messagedlg</a></td>
+		<td><a> [f] multiline</a></td>
+		<td><a> [f] normalizer</a></td>
+		<td><a> [f] pack</a></td>
+		<td><a> [f] progressbar</a></td>
+		<td><a> [f] protectedcall_</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] radio</a></td>
+		<td><a> [f] sbox</a></td>
+		<td><a> [f] separator</a></td>
+		<td><a> [f] spin</a></td>
+		<td><a> [f] spinbox</a></td>
+		<td><a> [f] submenu</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] tabs</a></td>
+		<td><a> [f] text</a></td>
+		<td><a> [f] timer</a></td>
+		<td><a> [f] toggle</a></td>
+		<td><a> [f] tree</a></td>
+		<td><a> [f] user</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] val</a></td>
+		<td><a> [f] vbox</a></td>
+		<td><a> [f] zbox</a></td>
+		</tr><td colspan='6'> [n] BOTTOM : 65533</td><tr>
+		</tr><td colspan='6'> [n] BUTTON1 : 49</td><tr>
+		</tr><td colspan='6'> [n] BUTTON2 : 50</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] BUTTON3 : 51</td><tr>
+		</tr><td colspan='6'> [n] BUTTON4 : 52</td><tr>
+		</tr><td colspan='6'> [n] BUTTON5 : 53</td><tr>
+		</tr><td colspan='6'> [n] CENTER : 65535</td><tr>
+		</tr><td colspan='6'> [n] CENTERPARENT : 65530</td><tr>
+		</tr><td colspan='6'> [n] CLOSE : -3</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] CONTINUE : -4</td><tr>
+		</tr><td colspan='6'> [n] CURRENT : 65531</td><tr>
+		</tr><td colspan='6'> [n] DEFAULT : -2</td><tr>
+		</tr><td colspan='6'> [n] ERROR : 1</td><tr>
+		</tr><td colspan='6'> [n] HIDE : 4</td><tr>
+		</tr><td colspan='6'> [n] IGNORE : -1</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] INVALID : -1</td><tr>
+		</tr><td colspan='6'> [n] K_0 : 48</td><tr>
+		</tr><td colspan='6'> [n] K_1 : 49</td><tr>
+		</tr><td colspan='6'> [n] K_2 : 50</td><tr>
+		</tr><td colspan='6'> [n] K_3 : 51</td><tr>
+		</tr><td colspan='6'> [n] K_4 : 52</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_5 : 53</td><tr>
+		</tr><td colspan='6'> [n] K_6 : 54</td><tr>
+		</tr><td colspan='6'> [n] K_7 : 55</td><tr>
+		</tr><td colspan='6'> [n] K_8 : 56</td><tr>
+		</tr><td colspan='6'> [n] K_9 : 57</td><tr>
+		</tr><td colspan='6'> [n] K_A : 65</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_B : 66</td><tr>
+		</tr><td colspan='6'> [n] K_BS : 8</td><tr>
+		</tr><td colspan='6'> [n] K_C : 67</td><tr>
+		</tr><td colspan='6'> [n] K_CR : 13</td><tr>
+		</tr><td colspan='6'> [n] K_Ccedilla : 398</td><tr>
+		</tr><td colspan='6'> [n] K_D : 68</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_DEL : 139</td><tr>
+		</tr><td colspan='6'> [n] K_DOWN : 136</td><tr>
+		</tr><td colspan='6'> [n] K_E : 69</td><tr>
+		</tr><td colspan='6'> [n] K_END : 135</td><tr>
+		</tr><td colspan='6'> [n] K_ESC : 141</td><tr>
+		</tr><td colspan='6'> [n] K_F : 70</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_F1 : 143</td><tr>
+		</tr><td colspan='6'> [n] K_F10 : 152</td><tr>
+		</tr><td colspan='6'> [n] K_F11 : 153</td><tr>
+		</tr><td colspan='6'> [n] K_F12 : 154</td><tr>
+		</tr><td colspan='6'> [n] K_F2 : 144</td><tr>
+		</tr><td colspan='6'> [n] K_F3 : 145</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_F4 : 146</td><tr>
+		</tr><td colspan='6'> [n] K_F5 : 147</td><tr>
+		</tr><td colspan='6'> [n] K_F6 : 148</td><tr>
+		</tr><td colspan='6'> [n] K_F7 : 149</td><tr>
+		</tr><td colspan='6'> [n] K_F8 : 150</td><tr>
+		</tr><td colspan='6'> [n] K_F9 : 151</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_G : 71</td><tr>
+		</tr><td colspan='6'> [n] K_H : 72</td><tr>
+		</tr><td colspan='6'> [n] K_HOME : 129</td><tr>
+		</tr><td colspan='6'> [n] K_I : 73</td><tr>
+		</tr><td colspan='6'> [n] K_INS : 138</td><tr>
+		</tr><td colspan='6'> [n] K_J : 74</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_K : 75</td><tr>
+		</tr><td colspan='6'> [n] K_L : 76</td><tr>
+		</tr><td colspan='6'> [n] K_LEFT : 132</td><tr>
+		</tr><td colspan='6'> [n] K_M : 77</td><tr>
+		</tr><td colspan='6'> [n] K_MIDDLE : 133</td><tr>
+		</tr><td colspan='6'> [n] K_Menu : 156</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_N : 78</td><tr>
+		</tr><td colspan='6'> [n] K_O : 79</td><tr>
+		</tr><td colspan='6'> [n] K_P : 80</td><tr>
+		</tr><td colspan='6'> [n] K_PAUSE : 140</td><tr>
+		</tr><td colspan='6'> [n] K_PGDN : 137</td><tr>
+		</tr><td colspan='6'> [n] K_PGUP : 131</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_Print : 155</td><tr>
+		</tr><td colspan='6'> [n] K_Q : 81</td><tr>
+		</tr><td colspan='6'> [n] K_R : 82</td><tr>
+		</tr><td colspan='6'> [n] K_RIGHT : 134</td><tr>
+		</tr><td colspan='6'> [n] K_S : 83</td><tr>
+		</tr><td colspan='6'> [n] K_SP : 32</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_T : 84</td><tr>
+		</tr><td colspan='6'> [n] K_TAB : 9</td><tr>
+		</tr><td colspan='6'> [n] K_U : 85</td><tr>
+		</tr><td colspan='6'> [n] K_UP : 130</td><tr>
+		</tr><td colspan='6'> [n] K_V : 86</td><tr>
+		</tr><td colspan='6'> [n] K_W : 87</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_X : 88</td><tr>
+		</tr><td colspan='6'> [n] K_Y : 89</td><tr>
+		</tr><td colspan='6'> [n] K_Z : 90</td><tr>
+		</tr><td colspan='6'> [n] K_a : 97</td><tr>
+		</tr><td colspan='6'> [n] K_acute : 157</td><tr>
+		</tr><td colspan='6'> [n] K_ampersand : 38</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_apostrophe : 39</td><tr>
+		</tr><td colspan='6'> [n] K_asterisk : 42</td><tr>
+		</tr><td colspan='6'> [n] K_at : 64</td><tr>
+		</tr><td colspan='6'> [n] K_b : 98</td><tr>
+		</tr><td colspan='6'> [n] K_backslash : 92</td><tr>
+		</tr><td colspan='6'> [n] K_bar : 124</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_braceleft : 123</td><tr>
+		</tr><td colspan='6'> [n] K_braceright : 125</td><tr>
+		</tr><td colspan='6'> [n] K_bracketleft : 91</td><tr>
+		</tr><td colspan='6'> [n] K_bracketright : 93</td><tr>
+		</tr><td colspan='6'> [n] K_c : 99</td><tr>
+		</tr><td colspan='6'> [n] K_c0 : 560</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_c1 : 561</td><tr>
+		</tr><td colspan='6'> [n] K_c2 : 562</td><tr>
+		</tr><td colspan='6'> [n] K_c3 : 563</td><tr>
+		</tr><td colspan='6'> [n] K_c4 : 564</td><tr>
+		</tr><td colspan='6'> [n] K_c5 : 565</td><tr>
+		</tr><td colspan='6'> [n] K_c6 : 566</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_c7 : 567</td><tr>
+		</tr><td colspan='6'> [n] K_c8 : 568</td><tr>
+		</tr><td colspan='6'> [n] K_c9 : 569</td><tr>
+		</tr><td colspan='6'> [n] K_cA : 577</td><tr>
+		</tr><td colspan='6'> [n] K_cAsterisk : 554</td><tr>
+		</tr><td colspan='6'> [n] K_cB : 578</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cBS : 520</td><tr>
+		</tr><td colspan='6'> [n] K_cBackslash : 604</td><tr>
+		</tr><td colspan='6'> [n] K_cBracketleft : 603</td><tr>
+		</tr><td colspan='6'> [n] K_cBracketright : 605</td><tr>
+		</tr><td colspan='6'> [n] K_cC : 579</td><tr>
+		</tr><td colspan='6'> [n] K_cCR : 525</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cCcedilla : 654</td><tr>
+		</tr><td colspan='6'> [n] K_cComma : 556</td><tr>
+		</tr><td colspan='6'> [n] K_cD : 580</td><tr>
+		</tr><td colspan='6'> [n] K_cDEL : 651</td><tr>
+		</tr><td colspan='6'> [n] K_cDOWN : 648</td><tr>
+		</tr><td colspan='6'> [n] K_cE : 581</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cEND : 647</td><tr>
+		</tr><td colspan='6'> [n] K_cESC : 653</td><tr>
+		</tr><td colspan='6'> [n] K_cEqual : 573</td><tr>
+		</tr><td colspan='6'> [n] K_cF : 582</td><tr>
+		</tr><td colspan='6'> [n] K_cF1 : 655</td><tr>
+		</tr><td colspan='6'> [n] K_cF10 : 664</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cF11 : 665</td><tr>
+		</tr><td colspan='6'> [n] K_cF12 : 666</td><tr>
+		</tr><td colspan='6'> [n] K_cF2 : 656</td><tr>
+		</tr><td colspan='6'> [n] K_cF3 : 657</td><tr>
+		</tr><td colspan='6'> [n] K_cF4 : 658</td><tr>
+		</tr><td colspan='6'> [n] K_cF5 : 659</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cF6 : 660</td><tr>
+		</tr><td colspan='6'> [n] K_cF7 : 661</td><tr>
+		</tr><td colspan='6'> [n] K_cF8 : 662</td><tr>
+		</tr><td colspan='6'> [n] K_cF9 : 663</td><tr>
+		</tr><td colspan='6'> [n] K_cG : 583</td><tr>
+		</tr><td colspan='6'> [n] K_cH : 584</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cHOME : 641</td><tr>
+		</tr><td colspan='6'> [n] K_cI : 585</td><tr>
+		</tr><td colspan='6'> [n] K_cINS : 650</td><tr>
+		</tr><td colspan='6'> [n] K_cJ : 586</td><tr>
+		</tr><td colspan='6'> [n] K_cK : 587</td><tr>
+		</tr><td colspan='6'> [n] K_cL : 588</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cLEFT : 644</td><tr>
+		</tr><td colspan='6'> [n] K_cM : 589</td><tr>
+		</tr><td colspan='6'> [n] K_cMIDDLE : 645</td><tr>
+		</tr><td colspan='6'> [n] K_cMenu : 668</td><tr>
+		</tr><td colspan='6'> [n] K_cMinus : 557</td><tr>
+		</tr><td colspan='6'> [n] K_cN : 590</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cO : 591</td><tr>
+		</tr><td colspan='6'> [n] K_cP : 592</td><tr>
+		</tr><td colspan='6'> [n] K_cPAUSE : 652</td><tr>
+		</tr><td colspan='6'> [n] K_cPGDN : 649</td><tr>
+		</tr><td colspan='6'> [n] K_cPGUP : 643</td><tr>
+		</tr><td colspan='6'> [n] K_cPeriod : 558</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cPlus : 555</td><tr>
+		</tr><td colspan='6'> [n] K_cPrint : 667</td><tr>
+		</tr><td colspan='6'> [n] K_cQ : 593</td><tr>
+		</tr><td colspan='6'> [n] K_cR : 594</td><tr>
+		</tr><td colspan='6'> [n] K_cRIGHT : 646</td><tr>
+		</tr><td colspan='6'> [n] K_cS : 595</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cSP : 544</td><tr>
+		</tr><td colspan='6'> [n] K_cSemicolon  : 571</td><tr>
+		</tr><td colspan='6'> [n] K_cSlash : 559</td><tr>
+		</tr><td colspan='6'> [n] K_cT : 596</td><tr>
+		</tr><td colspan='6'> [n] K_cTAB : 521</td><tr>
+		</tr><td colspan='6'> [n] K_cU : 597</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_cUP : 642</td><tr>
+		</tr><td colspan='6'> [n] K_cV : 598</td><tr>
+		</tr><td colspan='6'> [n] K_cW : 599</td><tr>
+		</tr><td colspan='6'> [n] K_cX : 600</td><tr>
+		</tr><td colspan='6'> [n] K_cY : 601</td><tr>
+		</tr><td colspan='6'> [n] K_cZ : 602</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_ccedilla : 142</td><tr>
+		</tr><td colspan='6'> [n] K_circum : 94</td><tr>
+		</tr><td colspan='6'> [n] K_colon : 58</td><tr>
+		</tr><td colspan='6'> [n] K_comma : 44</td><tr>
+		</tr><td colspan='6'> [n] K_d : 100</td><tr>
+		</tr><td colspan='6'> [n] K_dollar : 36</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_e : 101</td><tr>
+		</tr><td colspan='6'> [n] K_equal : 61</td><tr>
+		</tr><td colspan='6'> [n] K_exclam : 33</td><tr>
+		</tr><td colspan='6'> [n] K_f : 102</td><tr>
+		</tr><td colspan='6'> [n] K_g : 103</td><tr>
+		</tr><td colspan='6'> [n] K_grave : 96</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_greater : 62</td><tr>
+		</tr><td colspan='6'> [n] K_h : 104</td><tr>
+		</tr><td colspan='6'> [n] K_i : 105</td><tr>
+		</tr><td colspan='6'> [n] K_j : 106</td><tr>
+		</tr><td colspan='6'> [n] K_k : 107</td><tr>
+		</tr><td colspan='6'> [n] K_l : 108</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_less : 60</td><tr>
+		</tr><td colspan='6'> [n] K_m : 109</td><tr>
+		</tr><td colspan='6'> [n] K_m0 : 816</td><tr>
+		</tr><td colspan='6'> [n] K_m1 : 817</td><tr>
+		</tr><td colspan='6'> [n] K_m2 : 818</td><tr>
+		</tr><td colspan='6'> [n] K_m3 : 819</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_m4 : 820</td><tr>
+		</tr><td colspan='6'> [n] K_m5 : 821</td><tr>
+		</tr><td colspan='6'> [n] K_m6 : 822</td><tr>
+		</tr><td colspan='6'> [n] K_m7 : 823</td><tr>
+		</tr><td colspan='6'> [n] K_m8 : 824</td><tr>
+		</tr><td colspan='6'> [n] K_m9 : 825</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mA : 833</td><tr>
+		</tr><td colspan='6'> [n] K_mAsterisk : 810</td><tr>
+		</tr><td colspan='6'> [n] K_mB : 834</td><tr>
+		</tr><td colspan='6'> [n] K_mBS : 776</td><tr>
+		</tr><td colspan='6'> [n] K_mBackslash : 860</td><tr>
+		</tr><td colspan='6'> [n] K_mBracketleft : 859</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mBracketright : 861</td><tr>
+		</tr><td colspan='6'> [n] K_mC : 835</td><tr>
+		</tr><td colspan='6'> [n] K_mCR : 781</td><tr>
+		</tr><td colspan='6'> [n] K_mCcedilla : 910</td><tr>
+		</tr><td colspan='6'> [n] K_mComma : 812</td><tr>
+		</tr><td colspan='6'> [n] K_mD : 836</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mDEL : 907</td><tr>
+		</tr><td colspan='6'> [n] K_mDOWN : 904</td><tr>
+		</tr><td colspan='6'> [n] K_mE : 837</td><tr>
+		</tr><td colspan='6'> [n] K_mEND : 903</td><tr>
+		</tr><td colspan='6'> [n] K_mESC : 909</td><tr>
+		</tr><td colspan='6'> [n] K_mEqual : 829</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mF : 838</td><tr>
+		</tr><td colspan='6'> [n] K_mF1 : 911</td><tr>
+		</tr><td colspan='6'> [n] K_mF10 : 920</td><tr>
+		</tr><td colspan='6'> [n] K_mF11 : 921</td><tr>
+		</tr><td colspan='6'> [n] K_mF12 : 922</td><tr>
+		</tr><td colspan='6'> [n] K_mF2 : 912</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mF3 : 913</td><tr>
+		</tr><td colspan='6'> [n] K_mF4 : 914</td><tr>
+		</tr><td colspan='6'> [n] K_mF5 : 915</td><tr>
+		</tr><td colspan='6'> [n] K_mF6 : 916</td><tr>
+		</tr><td colspan='6'> [n] K_mF7 : 917</td><tr>
+		</tr><td colspan='6'> [n] K_mF8 : 918</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mF9 : 919</td><tr>
+		</tr><td colspan='6'> [n] K_mG : 839</td><tr>
+		</tr><td colspan='6'> [n] K_mH : 840</td><tr>
+		</tr><td colspan='6'> [n] K_mHOME : 897</td><tr>
+		</tr><td colspan='6'> [n] K_mI : 841</td><tr>
+		</tr><td colspan='6'> [n] K_mINS : 906</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mJ : 842</td><tr>
+		</tr><td colspan='6'> [n] K_mK : 843</td><tr>
+		</tr><td colspan='6'> [n] K_mL : 844</td><tr>
+		</tr><td colspan='6'> [n] K_mLEFT : 900</td><tr>
+		</tr><td colspan='6'> [n] K_mM : 845</td><tr>
+		</tr><td colspan='6'> [n] K_mMIDDLE : 901</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mMenu : 924</td><tr>
+		</tr><td colspan='6'> [n] K_mMinus : 813</td><tr>
+		</tr><td colspan='6'> [n] K_mN : 846</td><tr>
+		</tr><td colspan='6'> [n] K_mO : 847</td><tr>
+		</tr><td colspan='6'> [n] K_mP : 848</td><tr>
+		</tr><td colspan='6'> [n] K_mPAUSE : 908</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mPGDN : 905</td><tr>
+		</tr><td colspan='6'> [n] K_mPGUP : 899</td><tr>
+		</tr><td colspan='6'> [n] K_mPeriod : 814</td><tr>
+		</tr><td colspan='6'> [n] K_mPlus : 811</td><tr>
+		</tr><td colspan='6'> [n] K_mPrint : 923</td><tr>
+		</tr><td colspan='6'> [n] K_mQ : 849</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mR : 850</td><tr>
+		</tr><td colspan='6'> [n] K_mRIGHT : 902</td><tr>
+		</tr><td colspan='6'> [n] K_mS : 851</td><tr>
+		</tr><td colspan='6'> [n] K_mSP : 800</td><tr>
+		</tr><td colspan='6'> [n] K_mSemicolon  : 827</td><tr>
+		</tr><td colspan='6'> [n] K_mSlash : 815</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mT : 852</td><tr>
+		</tr><td colspan='6'> [n] K_mTAB : 777</td><tr>
+		</tr><td colspan='6'> [n] K_mU : 853</td><tr>
+		</tr><td colspan='6'> [n] K_mUP : 898</td><tr>
+		</tr><td colspan='6'> [n] K_mV : 854</td><tr>
+		</tr><td colspan='6'> [n] K_mW : 855</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_mX : 856</td><tr>
+		</tr><td colspan='6'> [n] K_mY : 857</td><tr>
+		</tr><td colspan='6'> [n] K_mZ : 858</td><tr>
+		</tr><td colspan='6'> [n] K_minus : 45</td><tr>
+		</tr><td colspan='6'> [n] K_n : 110</td><tr>
+		</tr><td colspan='6'> [n] K_numbersign : 35</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_o : 111</td><tr>
+		</tr><td colspan='6'> [n] K_p : 112</td><tr>
+		</tr><td colspan='6'> [n] K_parentleft : 40</td><tr>
+		</tr><td colspan='6'> [n] K_parentright : 41</td><tr>
+		</tr><td colspan='6'> [n] K_percent : 37</td><tr>
+		</tr><td colspan='6'> [n] K_period : 46</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_plus : 43</td><tr>
+		</tr><td colspan='6'> [n] K_q : 113</td><tr>
+		</tr><td colspan='6'> [n] K_question : 63</td><tr>
+		</tr><td colspan='6'> [n] K_quotedbl : 34</td><tr>
+		</tr><td colspan='6'> [n] K_r : 114</td><tr>
+		</tr><td colspan='6'> [n] K_s : 115</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sAsterisk : 298</td><tr>
+		</tr><td colspan='6'> [n] K_sBS : 264</td><tr>
+		</tr><td colspan='6'> [n] K_sCR : 269</td><tr>
+		</tr><td colspan='6'> [n] K_sComma : 300</td><tr>
+		</tr><td colspan='6'> [n] K_sDEL : 395</td><tr>
+		</tr><td colspan='6'> [n] K_sDOWN : 392</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sEND : 391</td><tr>
+		</tr><td colspan='6'> [n] K_sESC : 397</td><tr>
+		</tr><td colspan='6'> [n] K_sF1 : 399</td><tr>
+		</tr><td colspan='6'> [n] K_sF10 : 408</td><tr>
+		</tr><td colspan='6'> [n] K_sF11 : 409</td><tr>
+		</tr><td colspan='6'> [n] K_sF12 : 410</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sF2 : 400</td><tr>
+		</tr><td colspan='6'> [n] K_sF3 : 401</td><tr>
+		</tr><td colspan='6'> [n] K_sF4 : 402</td><tr>
+		</tr><td colspan='6'> [n] K_sF5 : 403</td><tr>
+		</tr><td colspan='6'> [n] K_sF6 : 404</td><tr>
+		</tr><td colspan='6'> [n] K_sF7 : 405</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sF8 : 406</td><tr>
+		</tr><td colspan='6'> [n] K_sF9 : 407</td><tr>
+		</tr><td colspan='6'> [n] K_sHOME : 385</td><tr>
+		</tr><td colspan='6'> [n] K_sINS : 394</td><tr>
+		</tr><td colspan='6'> [n] K_sLEFT : 388</td><tr>
+		</tr><td colspan='6'> [n] K_sMIDDLE : 389</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sMenu : 412</td><tr>
+		</tr><td colspan='6'> [n] K_sMinus : 301</td><tr>
+		</tr><td colspan='6'> [n] K_sPAUSE : 396</td><tr>
+		</tr><td colspan='6'> [n] K_sPGDN : 393</td><tr>
+		</tr><td colspan='6'> [n] K_sPGUP : 387</td><tr>
+		</tr><td colspan='6'> [n] K_sPeriod : 302</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sPlus : 299</td><tr>
+		</tr><td colspan='6'> [n] K_sPrint : 411</td><tr>
+		</tr><td colspan='6'> [n] K_sRIGHT : 390</td><tr>
+		</tr><td colspan='6'> [n] K_sSP : 288</td><tr>
+		</tr><td colspan='6'> [n] K_sSlash : 303</td><tr>
+		</tr><td colspan='6'> [n] K_sTAB : 265</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_sUP : 386</td><tr>
+		</tr><td colspan='6'> [n] K_semicolon  : 59</td><tr>
+		</tr><td colspan='6'> [n] K_slash : 47</td><tr>
+		</tr><td colspan='6'> [n] K_t : 116</td><tr>
+		</tr><td colspan='6'> [n] K_tilde : 126</td><tr>
+		</tr><td colspan='6'> [n] K_u : 117</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_underscore : 95</td><tr>
+		</tr><td colspan='6'> [n] K_v : 118</td><tr>
+		</tr><td colspan='6'> [n] K_w : 119</td><tr>
+		</tr><td colspan='6'> [n] K_x : 120</td><tr>
+		</tr><td colspan='6'> [n] K_y : 121</td><tr>
+		</tr><td colspan='6'> [n] K_y0 : 1072</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_y1 : 1073</td><tr>
+		</tr><td colspan='6'> [n] K_y2 : 1074</td><tr>
+		</tr><td colspan='6'> [n] K_y3 : 1075</td><tr>
+		</tr><td colspan='6'> [n] K_y4 : 1076</td><tr>
+		</tr><td colspan='6'> [n] K_y5 : 1077</td><tr>
+		</tr><td colspan='6'> [n] K_y6 : 1078</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_y7 : 1079</td><tr>
+		</tr><td colspan='6'> [n] K_y8 : 1080</td><tr>
+		</tr><td colspan='6'> [n] K_y9 : 1081</td><tr>
+		</tr><td colspan='6'> [n] K_yA : 1089</td><tr>
+		</tr><td colspan='6'> [n] K_yAsterisk : 1066</td><tr>
+		</tr><td colspan='6'> [n] K_yB : 1090</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yBS : 1032</td><tr>
+		</tr><td colspan='6'> [n] K_yBackslash : 1116</td><tr>
+		</tr><td colspan='6'> [n] K_yBracketleft : 1115</td><tr>
+		</tr><td colspan='6'> [n] K_yBracketright : 1117</td><tr>
+		</tr><td colspan='6'> [n] K_yC : 1091</td><tr>
+		</tr><td colspan='6'> [n] K_yCR : 1037</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yCcedilla : 1166</td><tr>
+		</tr><td colspan='6'> [n] K_yComma : 1068</td><tr>
+		</tr><td colspan='6'> [n] K_yD : 1092</td><tr>
+		</tr><td colspan='6'> [n] K_yDEL : 1163</td><tr>
+		</tr><td colspan='6'> [n] K_yDOWN : 1160</td><tr>
+		</tr><td colspan='6'> [n] K_yE : 1093</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yEND : 1159</td><tr>
+		</tr><td colspan='6'> [n] K_yESC : 1165</td><tr>
+		</tr><td colspan='6'> [n] K_yEqual : 1085</td><tr>
+		</tr><td colspan='6'> [n] K_yF : 1094</td><tr>
+		</tr><td colspan='6'> [n] K_yF1 : 1167</td><tr>
+		</tr><td colspan='6'> [n] K_yF10 : 1176</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yF11 : 1177</td><tr>
+		</tr><td colspan='6'> [n] K_yF12 : 1178</td><tr>
+		</tr><td colspan='6'> [n] K_yF2 : 1168</td><tr>
+		</tr><td colspan='6'> [n] K_yF3 : 1169</td><tr>
+		</tr><td colspan='6'> [n] K_yF4 : 1170</td><tr>
+		</tr><td colspan='6'> [n] K_yF5 : 1171</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yF6 : 1172</td><tr>
+		</tr><td colspan='6'> [n] K_yF7 : 1173</td><tr>
+		</tr><td colspan='6'> [n] K_yF8 : 1174</td><tr>
+		</tr><td colspan='6'> [n] K_yF9 : 1175</td><tr>
+		</tr><td colspan='6'> [n] K_yG : 1095</td><tr>
+		</tr><td colspan='6'> [n] K_yH : 1096</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yHOME : 1153</td><tr>
+		</tr><td colspan='6'> [n] K_yI : 1097</td><tr>
+		</tr><td colspan='6'> [n] K_yINS : 1162</td><tr>
+		</tr><td colspan='6'> [n] K_yJ : 1098</td><tr>
+		</tr><td colspan='6'> [n] K_yK : 1099</td><tr>
+		</tr><td colspan='6'> [n] K_yL : 1100</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yLEFT : 1156</td><tr>
+		</tr><td colspan='6'> [n] K_yM : 1101</td><tr>
+		</tr><td colspan='6'> [n] K_yMIDDLE : 1157</td><tr>
+		</tr><td colspan='6'> [n] K_yMenu : 1180</td><tr>
+		</tr><td colspan='6'> [n] K_yMinus : 1069</td><tr>
+		</tr><td colspan='6'> [n] K_yN : 1102</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yO : 1103</td><tr>
+		</tr><td colspan='6'> [n] K_yP : 1104</td><tr>
+		</tr><td colspan='6'> [n] K_yPAUSE : 1164</td><tr>
+		</tr><td colspan='6'> [n] K_yPGDN : 1161</td><tr>
+		</tr><td colspan='6'> [n] K_yPGUP : 1155</td><tr>
+		</tr><td colspan='6'> [n] K_yPeriod : 1070</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yPlus : 1067</td><tr>
+		</tr><td colspan='6'> [n] K_yPrint : 1179</td><tr>
+		</tr><td colspan='6'> [n] K_yQ : 1105</td><tr>
+		</tr><td colspan='6'> [n] K_yR : 1106</td><tr>
+		</tr><td colspan='6'> [n] K_yRIGHT : 1158</td><tr>
+		</tr><td colspan='6'> [n] K_yS : 1107</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_ySP : 1056</td><tr>
+		</tr><td colspan='6'> [n] K_ySemicolon  : 1083</td><tr>
+		</tr><td colspan='6'> [n] K_ySlash : 1071</td><tr>
+		</tr><td colspan='6'> [n] K_yT : 1108</td><tr>
+		</tr><td colspan='6'> [n] K_yTAB : 1033</td><tr>
+		</tr><td colspan='6'> [n] K_yU : 1109</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_yUP : 1154</td><tr>
+		</tr><td colspan='6'> [n] K_yV : 1110</td><tr>
+		</tr><td colspan='6'> [n] K_yW : 1111</td><tr>
+		</tr><td colspan='6'> [n] K_yX : 1112</td><tr>
+		</tr><td colspan='6'> [n] K_yY : 1113</td><tr>
+		</tr><td colspan='6'> [n] K_yZ : 1114</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] K_z : 122</td><tr>
+		</tr><td colspan='6'> [n] LEFT : 65534</td><tr>
+		</tr><td colspan='6'> [n] MAXIMIZE : 3</td><tr>
+		</tr><td colspan='6'> [n] MINIMIZE : 2</td><tr>
+		</tr><td colspan='6'> [n] MOUSEPOS : 65532</td><tr>
+		</tr><td colspan='6'> [n] NOERROR : 0</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] OPENED : -1</td><tr>
+		</tr><td colspan='6'> [n] PRIMARY : -1</td><tr>
+		</tr><td colspan='6'> [n] RESTORE : 1</td><tr>
+		</tr><td colspan='6'> [n] RIGHT : 65533</td><tr>
+		</tr><td colspan='6'> [n] SBDN : 1</td><tr>
+		</tr><td colspan='6'> [n] SBDRAGH : 11</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] SBDRAGV : 5</td><tr>
+		</tr><td colspan='6'> [n] SBLEFT : 6</td><tr>
+		</tr><td colspan='6'> [n] SBPGDN : 3</td><tr>
+		</tr><td colspan='6'> [n] SBPGLEFT : 8</td><tr>
+		</tr><td colspan='6'> [n] SBPGRIGHT : 9</td><tr>
+		</tr><td colspan='6'> [n] SBPGUP : 2</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] SBPOSH : 10</td><tr>
+		</tr><td colspan='6'> [n] SBPOSV : 4</td><tr>
+		</tr><td colspan='6'> [n] SBRIGHT : 7</td><tr>
+		</tr><td colspan='6'> [n] SBUP : 0</td><tr>
+		</tr><td colspan='6'> [n] SECONDARY : -2</td><tr>
+		</tr><td colspan='6'> [n] SHOW : 0</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] TOP : 65534</td><tr>
+		</tr><td colspan='6'> [n] _VERSION_NUMBER : 300000</td><tr>
+		</tr><td colspan='6'> [s] MASK_EFLOAT : [+/-]?(/d+/.?/d*|/./d+)([eE][+/-]?/d+)?</td><tr>
+		</tr><td colspan='6'> [s] MASK_FLOAT : [+/-]?(/d+/.?/d*|/./d+)</td><tr>
+		</tr><td colspan='6'> [s] MASK_INT : [+/-]?/d+</td><tr>
+		</tr><td colspan='6'> [s] MASK_UFLOAT : (/d+/.?/d*|/./d+)</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [s] MASK_UINT : /d+</td><tr>
+		</tr><td colspan='6'> [s] _COPYRIGHT : Copyright (C) 1994-2009 Tecgraf, PUC-Rio.</td><tr>
+		</tr><td colspan='6'> [s] _DESCRIPTION : Portable toolkit for building graphical user interfaces.</td><tr>
+		</tr><td colspan='6'> [s] _IUPOPEN_CALL : INTERNAL</td><tr>
+		</tr><td colspan='6'> [s] _NAME : IUP - Portable User Interface</td><tr>
+		</tr><td colspan='6'> [s] _PACKAGE : iuplua</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [s] _VERSION : 3.0 RC3</td><tr>
+		</tr><td colspan='6'> [s] _VERSION_DATE : 2009/10/02</td><tr>
+		<td><a> [t] BOX</a></td>
+		<td><a> [t] IUPTREEREFTABLE</a></td>
+		<td><a> [t] WIDGET</a></td>
+		<td><a> [t] _G</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] _M</a></td>
+		<td><a> [t] callbacks</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.BOX'style='color:#0000FF'><h3>Module: _G.iup.BOX</h3></div>
+<table><tr><th colspan='6'>_G.iup.BOX</th></tr>
+	<tr>
+		<td><a> [f] setAttributes</a></td>
+		<td><a> [t] parent</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.BOX.parent'style='color:#0000FF'><h3>Module: _G.iup.BOX.parent</h3></div>
+<table><tr><th colspan='6'>_G.iup.BOX.parent</th></tr>
+	<tr>
+		<td><a> [f] constructor</a></td>
+		<td><a> [f] hide</a></td>
+		<td><a> [f] map</a></td>
+		<td><a> [f] setAttributes</a></td>
+		<td><a> [f] show</a></td>
+		<td><a> [t] callback</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.BOX.parent.callback'style='color:#0000FF'><h3>Module: _G.iup.BOX.parent.callback</h3></div>
+<table><tr><th colspan='6'>_G.iup.BOX.parent.callback</th></tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.IUPTREEREFTABLE'style='color:#0000FF'><h3>Module: _G.iup.IUPTREEREFTABLE</h3></div>
+<table><tr><th colspan='6'>_G.iup.IUPTREEREFTABLE</th></tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks'style='color:#0000FF'><h3>Module: _G.iup.callbacks</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks</th></tr>
+	<tr>
+		<td><a> [t] ACTION</a></td>
+		<td><a> [t] ACTION_CB</a></td>
+		<td><a> [t] BGCOLOR_CB</a></td>
+		<td><a> [t] BRANCHCLOSE_CB</a></td>
+		<td><a> [t] BRANCHOPEN_CB</a></td>
+		<td><a> [t] BUTTON_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] BUTTON_PRESS_CB</a></td>
+		<td><a> [t] BUTTON_RELEASE_CB</a></td>
+		<td><a> [t] CARET_CB</a></td>
+		<td><a> [t] CELL_CB</a></td>
+		<td><a> [t] CHANGE_CB</a></td>
+		<td><a> [t] CLICK_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] CLOSE_CB</a></td>
+		<td><a> [t] DBLCLICK_CB</a></td>
+		<td><a> [t] DRAGDROP_CB</a></td>
+		<td><a> [t] DRAG_CB</a></td>
+		<td><a> [t] DRAW_CB</a></td>
+		<td><a> [t] DROPCHECK_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] DROPDOWN_CB</a></td>
+		<td><a> [t] DROPFILES_CB</a></td>
+		<td><a> [t] DROPSELECT_CB</a></td>
+		<td><a> [t] DROP_CB</a></td>
+		<td><a> [t] EDITION_CB</a></td>
+		<td><a> [t] EDIT_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] ENTERITEM_CB</a></td>
+		<td><a> [t] ENTERWINDOW_CB</a></td>
+		<td><a> [t] EXECUTELEAF_CB</a></td>
+		<td><a> [t] EXTENDED_CB</a></td>
+		<td><a> [t] FGCOLOR_CB</a></td>
+		<td><a> [t] FILE_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] FOCUS_CB</a></td>
+		<td><a> [t] FONT_CB</a></td>
+		<td><a> [t] GETFOCUS_CB</a></td>
+		<td><a> [t] HEIGHT_CB</a></td>
+		<td><a> [t] HELP_CB</a></td>
+		<td><a> [t] HIGHLIGHT_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] HSPAN_CB</a></td>
+		<td><a> [t] KEYPRESS_CB</a></td>
+		<td><a> [t] KILLFOCUS_CB</a></td>
+		<td><a> [t] K_ANY</a></td>
+		<td><a> [t] LEAVEITEM_CB</a></td>
+		<td><a> [t] LEAVEWINDOW_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] MAP_CB</a></td>
+		<td><a> [t] MARKEDIT_CB</a></td>
+		<td><a> [t] MARK_CB</a></td>
+		<td><a> [t] MATCH_CB</a></td>
+		<td><a> [t] MDIACTIVATE_CB</a></td>
+		<td><a> [t] MENUCLOSE_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] MOTION_CB</a></td>
+		<td><a> [t] MOUSECLICK_CB</a></td>
+		<td><a> [t] MOUSEMOTION_CB</a></td>
+		<td><a> [t] MOUSEMOVE_CB</a></td>
+		<td><a> [t] MOVE_CB</a></td>
+		<td><a> [t] MULTISELECTION_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] MULTISELECT_CB</a></td>
+		<td><a> [t] NCOLS_CB</a></td>
+		<td><a> [t] NLINES_CB</a></td>
+		<td><a> [t] NODEREMOVED_CB</a></td>
+		<td><a> [t] OPEN_CB</a></td>
+		<td><a> [t] RELEASE_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] RENAMENODE_CB</a></td>
+		<td><a> [t] RENAME_CB</a></td>
+		<td><a> [t] RESIZE_CB</a></td>
+		<td><a> [t] RIGHTCLICK_CB</a></td>
+		<td><a> [t] SCROLLING_CB</a></td>
+		<td><a> [t] SCROLLTOP_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] SCROLL_CB</a></td>
+		<td><a> [t] SELECTION_CB</a></td>
+		<td><a> [t] SELECT_CB</a></td>
+		<td><a> [t] SHOWRENAME_CB</a></td>
+		<td><a> [t] SHOW_CB</a></td>
+		<td><a> [t] SPIN_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] SWITCH_CB</a></td>
+		<td><a> [t] TABCHANGE_CB</a></td>
+		<td><a> [t] TRAYCLICK_CB</a></td>
+		<td><a> [t] UNMAP_CB</a></td>
+		<td><a> [t] VALUECHANGED_CB</a></td>
+		<td><a> [t] VALUE_CB</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] VALUE_EDIT_CB</a></td>
+		<td><a> [t] VSPAN_CB</a></td>
+		<td><a> [t] WHEEL_CB</a></td>
+		<td><a> [t] WIDTH_CB</a></td>
+		<td><a> [t] WOM_CB</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.ACTION'style='color:#0000FF'><h3>Module: _G.iup.callbacks.ACTION</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.ACTION</th></tr>
+	<tr>
+		<td><a> [f] button</a></td>
+		<td><a> [f] canvas</a></td>
+		<td><a> [f] item</a></td>
+		<td><a> [f] list</a></td>
+		<td><a> [f] multiline</a></td>
+		<td><a> [f] text</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] toggle</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.ACTION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.ACTION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.ACTION_CB</th></tr>
+	<tr>
+		<td><a> [f] matrix</a></td>
+		<td><a> [f] timer</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BGCOLOR_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BGCOLOR_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BGCOLOR_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BRANCHCLOSE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BRANCHCLOSE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BRANCHCLOSE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BRANCHOPEN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BRANCHOPEN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BRANCHOPEN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BUTTON_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BUTTON_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BUTTON_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BUTTON_PRESS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BUTTON_PRESS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BUTTON_PRESS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.BUTTON_RELEASE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.BUTTON_RELEASE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.BUTTON_RELEASE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.CARET_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.CARET_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.CARET_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.CELL_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.CELL_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.CELL_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.CHANGE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.CHANGE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.CHANGE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.CLICK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.CLICK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.CLICK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.CLOSE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.CLOSE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.CLOSE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DBLCLICK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DBLCLICK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DBLCLICK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DRAGDROP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DRAGDROP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DRAGDROP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DRAG_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DRAG_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DRAG_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DRAW_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DRAW_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DRAW_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DROPCHECK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DROPCHECK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DROPCHECK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DROPDOWN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DROPDOWN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DROPDOWN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DROPFILES_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DROPFILES_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DROPFILES_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DROPSELECT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DROPSELECT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DROPSELECT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.DROP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.DROP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.DROP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.EDITION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.EDITION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.EDITION_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.EDIT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.EDIT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.EDIT_CB</th></tr>
+	<tr>
+		<td><a> [f] list</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.ENTERITEM_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.ENTERITEM_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.ENTERITEM_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.ENTERWINDOW_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.ENTERWINDOW_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.ENTERWINDOW_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.EXECUTELEAF_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.EXECUTELEAF_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.EXECUTELEAF_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.EXTENDED_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.EXTENDED_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.EXTENDED_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.FGCOLOR_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.FGCOLOR_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.FGCOLOR_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.FILE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.FILE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.FILE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.FOCUS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.FOCUS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.FOCUS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.FONT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.FONT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.FONT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.GETFOCUS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.GETFOCUS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.GETFOCUS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.HEIGHT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.HEIGHT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.HEIGHT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.HELP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.HELP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.HELP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.HIGHLIGHT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.HIGHLIGHT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.HIGHLIGHT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.HSPAN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.HSPAN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.HSPAN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.KEYPRESS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.KEYPRESS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.KEYPRESS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.KILLFOCUS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.KILLFOCUS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.KILLFOCUS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.K_ANY'style='color:#0000FF'><h3>Module: _G.iup.callbacks.K_ANY</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.K_ANY</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.LEAVEITEM_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.LEAVEITEM_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.LEAVEITEM_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.LEAVEWINDOW_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.LEAVEWINDOW_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.LEAVEWINDOW_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MAP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MAP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MAP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MARKEDIT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MARKEDIT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MARKEDIT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MARK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MARK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MARK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MATCH_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MATCH_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MATCH_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MDIACTIVATE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MDIACTIVATE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MDIACTIVATE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MENUCLOSE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MENUCLOSE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MENUCLOSE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MOTION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MOTION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MOTION_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MOUSECLICK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MOUSECLICK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MOUSECLICK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MOUSEMOTION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MOUSEMOTION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MOUSEMOTION_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MOUSEMOVE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MOUSEMOVE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MOUSEMOVE_CB</th></tr>
+	<tr>
+		<td><a> [f] dial</a></td>
+		<td><a> [f] matrix</a></td>
+		<td><a> [f] val</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MOVE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MOVE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MOVE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MULTISELECTION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MULTISELECTION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MULTISELECTION_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.MULTISELECT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.MULTISELECT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.MULTISELECT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.NCOLS_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.NCOLS_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.NCOLS_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.NLINES_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.NLINES_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.NLINES_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.NODEREMOVED_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.NODEREMOVED_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.NODEREMOVED_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.OPEN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.OPEN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.OPEN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.RELEASE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.RELEASE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.RELEASE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.RENAMENODE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.RENAMENODE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.RENAMENODE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.RENAME_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.RENAME_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.RENAME_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.RESIZE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.RESIZE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.RESIZE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.RIGHTCLICK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.RIGHTCLICK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.RIGHTCLICK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SCROLLING_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SCROLLING_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SCROLLING_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SCROLLTOP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SCROLLTOP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SCROLLTOP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SCROLL_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SCROLL_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SCROLL_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SELECTION_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SELECTION_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SELECTION_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SELECT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SELECT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SELECT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SHOWRENAME_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SHOWRENAME_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SHOWRENAME_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SHOW_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SHOW_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SHOW_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SPIN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SPIN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SPIN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.SWITCH_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.SWITCH_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.SWITCH_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.TABCHANGE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.TABCHANGE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.TABCHANGE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.TRAYCLICK_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.TRAYCLICK_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.TRAYCLICK_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.UNMAP_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.UNMAP_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.UNMAP_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.VALUECHANGED_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.VALUECHANGED_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.VALUECHANGED_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.VALUE_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.VALUE_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.VALUE_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.VALUE_EDIT_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.VALUE_EDIT_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.VALUE_EDIT_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.VSPAN_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.VSPAN_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.VSPAN_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.WHEEL_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.WHEEL_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.WHEEL_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.WIDTH_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.WIDTH_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.WIDTH_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.iup.callbacks.WOM_CB'style='color:#0000FF'><h3>Module: _G.iup.callbacks.WOM_CB</h3></div>
+<table><tr><th colspan='6'>_G.iup.callbacks.WOM_CB</th></tr>
+	<tr>
+		<td><a> [f] 1</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.joypad'style='color:#0000FF'><h3>Module: _G.joypad</h3></div>
+<table><tr><th colspan='6'>_G.joypad</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+		<td><a> [f] getdown</a></td>
+		<td><a> [f] getimmediate</a></td>
+		<td><a> [f] getup</a></td>
+		<td><a> [f] read</a></td>
+		<td><a> [f] readdown</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] readimmediate</a></td>
+		<td><a> [f] readup</a></td>
+		<td><a> [f] set</a></td>
+		<td><a> [f] write</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.memory'style='color:#0000FF'><h3>Module: _G.memory</h3></div>
+<table><tr><th colspan='6'>_G.memory</th></tr>
+	<tr>
+		<td><a> [f] getregister</a></td>
+		<td><a> [f] readbyte</a></td>
+		<td><a> [f] readbyterange</a></td>
+		<td><a> [f] readbytesigned</a></td>
+		<td><a> [f] readbyteunsigned</a></td>
+		<td><a> [f] readword</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] readwordsigned</a></td>
+		<td><a> [f] readwordunsigned</a></td>
+		<td><a> [f] register</a></td>
+		<td><a> [f] registerexec</a></td>
+		<td><a> [f] registerexecute</a></td>
+		<td><a> [f] registerrun</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] registerwrite</a></td>
+		<td><a> [f] setregister</a></td>
+		<td><a> [f] writebyte</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.movie'style='color:#0000FF'><h3>Module: _G.movie</h3></div>
+<table><tr><th colspan='6'>_G.movie</th></tr>
+	<tr>
+		<td><a> [f] active</a></td>
+		<td><a> [f] close</a></td>
+		<td><a> [f] filename</a></td>
+		<td><a> [f] framecount</a></td>
+		<td><a> [f] getname</a></td>
+		<td><a> [f] getreadonly</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] isfromsavestate</a></td>
+		<td><a> [f] ispoweron</a></td>
+		<td><a> [f] length</a></td>
+		<td><a> [f] mode</a></td>
+		<td><a> [f] name</a></td>
+		<td><a> [f] playbeginning</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] playing</a></td>
+		<td><a> [f] readonly</a></td>
+		<td><a> [f] recording</a></td>
+		<td><a> [f] replay</a></td>
+		<td><a> [f] rerecordcount</a></td>
+		<td><a> [f] rerecordcounting</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] setreadonly</a></td>
+		<td><a> [f] stop</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.rom'style='color:#0000FF'><h3>Module: _G.rom</h3></div>
+<table><tr><th colspan='6'>_G.rom</th></tr>
+	<tr>
+		<td><a> [f] gethash</a></td>
+		<td><a> [f] readbyte</a></td>
+		<td><a> [f] readbytesigned</a></td>
+		<td><a> [f] readbyteunsigned</a></td>
+		<td><a> [f] writebyte</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.savestate'style='color:#0000FF'><h3>Module: _G.savestate</h3></div>
+<table><tr><th colspan='6'>_G.savestate</th></tr>
+	<tr>
+		<td><a> [f] create</a></td>
+		<td><a> [f] loadscriptdata</a></td>
+		<td><a> [f] object</a></td>
+		<td><a> [f] persist</a></td>
+		<td><a> [f] registerload</a></td>
+		<td><a> [f] registersave</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] save</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.sound'style='color:#0000FF'><h3>Module: _G.sound</h3></div>
+<table><tr><th colspan='6'>_G.sound</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.taseditor'style='color:#0000FF'><h3>Module: _G.taseditor</h3></div>
+<table><tr><th colspan='6'>_G.taseditor</th></tr>
+	<tr>
+		<td><a> [f] applyinputchanges</a></td>
+		<td><a> [f] clearinputchanges</a></td>
+		<td><a> [f] engaged</a></td>
+		<td><a> [f] getcurrentbranch</a></td>
+		<td><a> [f] getinput</a></td>
+		<td><a> [f] getlostplayback</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] getmarker</a></td>
+		<td><a> [f] getnote</a></td>
+		<td><a> [f] getplaybacktarget</a></td>
+		<td><a> [f] getrecordermode</a></td>
+		<td><a> [f] getselection</a></td>
+		<td><a> [f] getsuperimpose</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] markedframe</a></td>
+		<td><a> [f] registerauto</a></td>
+		<td><a> [f] registermanual</a></td>
+		<td><a> [f] removemarker</a></td>
+		<td><a> [f] setmarker</a></td>
+		<td><a> [f] setnote</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] setplayback</a></td>
+		<td><a> [f] setselection</a></td>
+		<td><a> [f] stopseeking</a></td>
+		<td><a> [f] submitdeleteframes</a></td>
+		<td><a> [f] submitinputchange</a></td>
+		<td><a> [f] submitinsertframes</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.winapi'style='color:#0000FF'><h3>Module: _G.winapi</h3></div>
+<table><tr><th colspan='6'>_G.winapi</th></tr>
+	<tr>
+		<td><a> [f] beep</a></td>
+		<td><a> [f] copy_file</a></td>
+		<td><a> [f] create_reg_key</a></td>
+		<td><a> [f] delete_file_or_dir</a></td>
+		<td><a> [f] dirs</a></td>
+		<td><a> [f] encode</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] enum_windows</a></td>
+		<td><a> [f] execute</a></td>
+		<td><a> [f] files</a></td>
+		<td><a> [f] find_all_windows</a></td>
+		<td><a> [f] find_window</a></td>
+		<td><a> [f] find_window_ex</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] find_window_match</a></td>
+		<td><a> [f] get_clipboard</a></td>
+		<td><a> [f] get_current_pid</a></td>
+		<td><a> [f] get_current_process</a></td>
+		<td><a> [f] get_desktop_window</a></td>
+		<td><a> [f] get_disk_free_space</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] get_disk_network_name</a></td>
+		<td><a> [f] get_drive_type</a></td>
+		<td><a> [f] get_encoding</a></td>
+		<td><a> [f] get_foreground_window</a></td>
+		<td><a> [f] get_logical_drives</a></td>
+		<td><a> [f] get_processes</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] locked_eval</a></td>
+		<td><a> [f] make_class_matcher</a></td>
+		<td><a> [f] make_dir</a></td>
+		<td><a> [f] make_name_matcher</a></td>
+		<td><a> [f] make_pipe_server</a></td>
+		<td><a> [f] make_timer</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] move_file</a></td>
+		<td><a> [f] open_pipe</a></td>
+		<td><a> [f] open_reg_key</a></td>
+		<td><a> [f] output_debug_string</a></td>
+		<td><a> [f] process_from_id</a></td>
+		<td><a> [f] remove_dir</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] send_to_window</a></td>
+		<td><a> [f] set_clipboard</a></td>
+		<td><a> [f] set_encoding</a></td>
+		<td><a> [f] setenv</a></td>
+		<td><a> [f] shell_exec</a></td>
+		<td><a> [f] short_path</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] show_message</a></td>
+		<td><a> [f] sleep</a></td>
+		<td><a> [f] spawn_process</a></td>
+		<td><a> [f] temp_name</a></td>
+		<td><a> [f] tile_windows</a></td>
+		<td><a> [f] use_gui</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] utf8_expand</a></td>
+		<td><a> [f] wait_for_processes</a></td>
+		<td><a> [f] watch_for_file_changes</a></td>
+		</tr><td colspan='6'> [n] CP_ACP : 0</td><tr>
+		</tr><td colspan='6'> [n] CP_UTF16 : -1</td><tr>
+		</tr><td colspan='6'> [n] CP_UTF8 : 65001</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] FILE_ACTION_ADDED : 1</td><tr>
+		</tr><td colspan='6'> [n] FILE_ACTION_MODIFIED : 3</td><tr>
+		</tr><td colspan='6'> [n] FILE_ACTION_REMOVED : 2</td><tr>
+		</tr><td colspan='6'> [n] FILE_ACTION_RENAMED_NEW_NAME : 5</td><tr>
+		</tr><td colspan='6'> [n] FILE_ACTION_RENAMED_OLD_NAME : 4</td><tr>
+		</tr><td colspan='6'> [n] FILE_NOTIFY_CHANGE_DIR_NAME : 2</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] FILE_NOTIFY_CHANGE_FILE_NAME : 1</td><tr>
+		</tr><td colspan='6'> [n] FILE_NOTIFY_CHANGE_LAST_WRITE : 16</td><tr>
+		</tr><td colspan='6'> [n] SW_HIDE : 0</td><tr>
+		</tr><td colspan='6'> [n] SW_MAXIMIZE : 3</td><tr>
+		</tr><td colspan='6'> [n] SW_MINIMIZE : 6</td><tr>
+		</tr><td colspan='6'> [n] SW_SHOWNORMAL : 1</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] VK_BACK : 8</td><tr>
+		</tr><td colspan='6'> [n] VK_DELETE : 46</td><tr>
+		</tr><td colspan='6'> [n] VK_DOWN : 40</td><tr>
+		</tr><td colspan='6'> [n] VK_END : 35</td><tr>
+		</tr><td colspan='6'> [n] VK_ESCAPE : 27</td><tr>
+		</tr><td colspan='6'> [n] VK_F1 : 112</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] VK_F10 : 121</td><tr>
+		</tr><td colspan='6'> [n] VK_F11 : 122</td><tr>
+		</tr><td colspan='6'> [n] VK_F12 : 123</td><tr>
+		</tr><td colspan='6'> [n] VK_F2 : 113</td><tr>
+		</tr><td colspan='6'> [n] VK_F3 : 114</td><tr>
+		</tr><td colspan='6'> [n] VK_F4 : 115</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] VK_F5 : 116</td><tr>
+		</tr><td colspan='6'> [n] VK_F6 : 117</td><tr>
+		</tr><td colspan='6'> [n] VK_F7 : 118</td><tr>
+		</tr><td colspan='6'> [n] VK_F8 : 119</td><tr>
+		</tr><td colspan='6'> [n] VK_F9 : 120</td><tr>
+		</tr><td colspan='6'> [n] VK_HOME : 36</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] VK_INSERT : 45</td><tr>
+		</tr><td colspan='6'> [n] VK_LEFT : 37</td><tr>
+		</tr><td colspan='6'> [n] VK_NEXT : 34</td><tr>
+		</tr><td colspan='6'> [n] VK_PRIOR : 33</td><tr>
+		</tr><td colspan='6'> [n] VK_RETURN : 13</td><tr>
+		</tr><td colspan='6'> [n] VK_RIGHT : 39</td><tr>
+	</tr>
+	<tr>
+		</tr><td colspan='6'> [n] VK_SPACE : 32</td><tr>
+		</tr><td colspan='6'> [n] VK_TAB : 9</td><tr>
+		</tr><td colspan='6'> [n] VK_UP : 38</td><tr>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.zapper'style='color:#0000FF'><h3>Module: _G.zapper</h3></div>
+<table><tr><th colspan='6'>_G.zapper</th></tr>
+	<tr>
+		<td><a> [f] read</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><p> Query: ;; Load Modules: Functions Suspended, Functions Restored, ok, Main; Dump Tables: ok, Dump Functions: ok, Common Branches: ok, Sorting Branches: ok, Print TOC: 17 ok, Print Functions: 1182 ok, DONE</p>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+	table, th, td {border: 1px solid black;}
+	table tr:nth-child(even) {background-color: #C4C4C4;}
+	table tr:nth-child(odd) {background-color:#EFEFEF;}
+</style>
+</head><body>
+<div id='toc'><p></p></div>
+<table><tr><th colspan='3'>* Modules Found * Lua Ver. Lua 5.1</th></tr>
+	<tr>
+		<td><a href='#_G'style='display:block;text-decoration: none'>_G</a></td>
+		<td><a href='#_G.agg'style='display:block;text-decoration: none'>_G.agg</a></td>
+		<td><a href='#_G.bit'style='display:block;text-decoration: none'>_G.bit</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.emu'style='display:block;text-decoration: none'>_G.emu</a></td>
+		<td><a href='#_G.gui'style='display:block;text-decoration: none'>_G.gui</a></td>
+		<td><a href='#_G.input'style='display:block;text-decoration: none'>_G.input</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.joypad'style='display:block;text-decoration: none'>_G.joypad</a></td>
+		<td><a href='#_G.memory'style='display:block;text-decoration: none'>_G.memory</a></td>
+		<td><a href='#_G.movie'style='display:block;text-decoration: none'>_G.movie</a></td>
+	</tr>
+	<tr>
+		<td><a href='#_G.savestate'style='display:block;text-decoration: none'>_G.savestate</a></td>
+		<td><a href='#_G.sound'style='display:block;text-decoration: none'>_G.sound</a></td>
+		<td><a href='#_G.stylus'style='display:block;text-decoration: none'>_G.stylus</a></td>
+	</tr>
+</table>
+<BR /><b> [Datatypes:   [n] = number  [nil] = nil  [u] = userdata  [t] = table  [s] = string  [f] = function  [b] = boolean  [thr] = thread] </b><BR /><BR /><BR /><BR /><BR /><BR /><div id='_G'style='color:#0000FF'><h3>Module: _G</h3></div>
+<table><tr><th colspan='6'>_G</th></tr>
+	<tr>
+		<td><a> [f] AND</a></td>
+		<td><a> [f] BIT</a></td>
+		<td><a> [f] OR</a></td>
+		<td><a> [f] SHIFT</a></td>
+		<td><a> [f] XOR</a></td>
+		<td><a> [f] addressof</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] copytable</a></td>
+		<td><a> [f] gcinfo</a></td>
+		<td><a> [f] getfenv</a></td>
+		<td><a> [f] loadstring</a></td>
+		<td><a> [f] module</a></td>
+		<td><a> [f] newproxy</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] setfenv</a></td>
+		<td><a> [f] setmetatable</a></td>
+		<td><a> [f] unpack</a></td>
+		</tr><td colspan='6'> [s] _VERSION : Lua 5.1</td><tr>
+		<td><a> [t] _G</a></td>
+		<td><a> [t] agg</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] bit</a></td>
+		<td><a> [t] coroutine</a></td>
+		<td><a> [t] debug</a></td>
+		<td><a> [t] emu</a></td>
+		<td><a> [t] gui</a></td>
+		<td><a> [t] input</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] io</a></td>
+		<td><a> [t] joypad</a></td>
+		<td><a> [t] math</a></td>
+		<td><a> [t] memory</a></td>
+		<td><a> [t] movie</a></td>
+		<td><a> [t] os</a></td>
+	</tr>
+	<tr>
+		<td><a> [t] package</a></td>
+		<td><a> [t] savestate</a></td>
+		<td><a> [t] sound</a></td>
+		<td><a> [t] string</a></td>
+		<td><a> [t] stylus</a></td>
+		<td><a> [t] table</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.agg'style='color:#0000FF'><h3>Module: _G.agg</h3></div>
+<table><tr><th colspan='6'>_G.agg</th></tr>
+	<tr>
+		<td><a> [f] arc</a></td>
+		<td><a> [f] curve</a></td>
+		<td><a> [f] ellipse</a></td>
+		<td><a> [f] fillColor</a></td>
+		<td><a> [f] line</a></td>
+		<td><a> [f] lineColor</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] lineWidth</a></td>
+		<td><a> [f] noFill</a></td>
+		<td><a> [f] noLine</a></td>
+		<td><a> [f] rectangle</a></td>
+		<td><a> [f] roundedRect</a></td>
+		<td><a> [f] setFont</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] star</a></td>
+		<td><a> [f] text</a></td>
+		<td><a> [f] triangle</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.bit'style='color:#0000FF'><h3>Module: _G.bit</h3></div>
+<table><tr><th colspan='6'>_G.bit</th></tr>
+	<tr>
+		<td><a> [f] arshift</a></td>
+		<td><a> [f] band</a></td>
+		<td><a> [f] bnot</a></td>
+		<td><a> [f] bor</a></td>
+		<td><a> [f] bswap</a></td>
+		<td><a> [f] bxor</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] lshift</a></td>
+		<td><a> [f] rol</a></td>
+		<td><a> [f] ror</a></td>
+		<td><a> [f] rshift</a></td>
+		<td><a> [f] tobit</a></td>
+		<td><a> [f] tohex</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.emu'style='color:#0000FF'><h3>Module: _G.emu</h3></div>
+<table><tr><th colspan='6'>_G.emu</th></tr>
+	<tr>
+		<td><a> [f] addmenu</a></td>
+		<td><a> [f] atframeboundary</a></td>
+		<td><a> [f] emulateframe</a></td>
+		<td><a> [f] emulateframefast</a></td>
+		<td><a> [f] emulateframefastnoskipping</a></td>
+		<td><a> [f] emulateframeinvisible</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] emulating</a></td>
+		<td><a> [f] frameadvance</a></td>
+		<td><a> [f] framecount</a></td>
+		<td><a> [f] lagcount</a></td>
+		<td><a> [f] lagged</a></td>
+		<td><a> [f] message</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] openscript</a></td>
+		<td><a> [f] pause</a></td>
+		<td><a> [f] persistglobalvariables</a></td>
+		<td><a> [f] redraw</a></td>
+		<td><a> [f] registerafter</a></td>
+		<td><a> [f] registerbefore</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] registerexit</a></td>
+		<td><a> [f] registermenustart</a></td>
+		<td><a> [f] registerstart</a></td>
+		<td><a> [f] reset</a></td>
+		<td><a> [f] setmenuiteminfo</a></td>
+		<td><a> [f] speedmode</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] unpause</a></td>
+		<td><a> [f] wait</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.gui'style='color:#0000FF'><h3>Module: _G.gui</h3></div>
+<table><tr><th colspan='6'>_G.gui</th></tr>
+	<tr>
+		<td><a> [f] box</a></td>
+		<td><a> [f] drawbox</a></td>
+		<td><a> [f] drawimage</a></td>
+		<td><a> [f] drawline</a></td>
+		<td><a> [f] drawpixel</a></td>
+		<td><a> [f] drawrect</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] drawtext</a></td>
+		<td><a> [f] gdoverlay</a></td>
+		<td><a> [f] gdscreenshot</a></td>
+		<td><a> [f] getpixel</a></td>
+		<td><a> [f] image</a></td>
+		<td><a> [f] line</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] opacity</a></td>
+		<td><a> [f] osdtext</a></td>
+		<td><a> [f] parsecolor</a></td>
+		<td><a> [f] pixel</a></td>
+		<td><a> [f] popup</a></td>
+		<td><a> [f] readpixel</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] rect</a></td>
+		<td><a> [f] redraw</a></td>
+		<td><a> [f] register</a></td>
+		<td><a> [f] setpixel</a></td>
+		<td><a> [f] text</a></td>
+		<td><a> [f] transparency</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] writepixel</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.input'style='color:#0000FF'><h3>Module: _G.input</h3></div>
+<table><tr><th colspan='6'>_G.input</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+		<td><a> [f] popup</a></td>
+		<td><a> [f] read</a></td>
+		<td><a> [f] registerhotkey</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.joypad'style='color:#0000FF'><h3>Module: _G.joypad</h3></div>
+<table><tr><th colspan='6'>_G.joypad</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+		<td><a> [f] getdown</a></td>
+		<td><a> [f] getup</a></td>
+		<td><a> [f] peek</a></td>
+		<td><a> [f] peekdown</a></td>
+		<td><a> [f] peekup</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] read</a></td>
+		<td><a> [f] readdown</a></td>
+		<td><a> [f] readup</a></td>
+		<td><a> [f] set</a></td>
+		<td><a> [f] write</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.memory'style='color:#0000FF'><h3>Module: _G.memory</h3></div>
+<table><tr><th colspan='6'>_G.memory</th></tr>
+	<tr>
+		<td><a> [f] getregister</a></td>
+		<td><a> [f] isvalid</a></td>
+		<td><a> [f] readbyte</a></td>
+		<td><a> [f] readbyterange</a></td>
+		<td><a> [f] readbytesigned</a></td>
+		<td><a> [f] readbyteunsigned</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] readdword</a></td>
+		<td><a> [f] readdwordsigned</a></td>
+		<td><a> [f] readdwordunsigned</a></td>
+		<td><a> [f] readlong</a></td>
+		<td><a> [f] readlongsigned</a></td>
+		<td><a> [f] readlongunsigned</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] readshort</a></td>
+		<td><a> [f] readshortsigned</a></td>
+		<td><a> [f] readshortunsigned</a></td>
+		<td><a> [f] readword</a></td>
+		<td><a> [f] readwordsigned</a></td>
+		<td><a> [f] readwordunsigned</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] register</a></td>
+		<td><a> [f] registerexec</a></td>
+		<td><a> [f] registerexecute</a></td>
+		<td><a> [f] registerread</a></td>
+		<td><a> [f] registerrun</a></td>
+		<td><a> [f] registerwrite</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] setregister</a></td>
+		<td><a> [f] vram_readword</a></td>
+		<td><a> [f] vram_writeword</a></td>
+		<td><a> [f] writebyte</a></td>
+		<td><a> [f] writedword</a></td>
+		<td><a> [f] writelong</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] writeshort</a></td>
+		<td><a> [f] writeword</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.movie'style='color:#0000FF'><h3>Module: _G.movie</h3></div>
+<table><tr><th colspan='6'>_G.movie</th></tr>
+	<tr>
+		<td><a> [f] active</a></td>
+		<td><a> [f] close</a></td>
+		<td><a> [f] framecount</a></td>
+		<td><a> [f] getname</a></td>
+		<td><a> [f] getreadonly</a></td>
+		<td><a> [f] length</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] mode</a></td>
+		<td><a> [f] name</a></td>
+		<td><a> [f] open</a></td>
+		<td><a> [f] play</a></td>
+		<td><a> [f] playback</a></td>
+		<td><a> [f] playing</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] readonly</a></td>
+		<td><a> [f] recording</a></td>
+		<td><a> [f] replay</a></td>
+		<td><a> [f] rerecordcount</a></td>
+		<td><a> [f] rerecordcounting</a></td>
+		<td><a> [f] setreadonly</a></td>
+	</tr>
+	<tr>
+		<td><a> [f] setrerecordcount</a></td>
+		<td><a> [f] stop</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.savestate'style='color:#0000FF'><h3>Module: _G.savestate</h3></div>
+<table><tr><th colspan='6'>_G.savestate</th></tr>
+	<tr>
+		<td><a> [f] create</a></td>
+		<td><a> [f] save</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.sound'style='color:#0000FF'><h3>Module: _G.sound</h3></div>
+<table><tr><th colspan='6'>_G.sound</th></tr>
+	<tr>
+		<td><a> [f] clear</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><div id='_G.stylus'style='color:#0000FF'><h3>Module: _G.stylus</h3></div>
+<table><tr><th colspan='6'>_G.stylus</th></tr>
+	<tr>
+		<td><a> [f] get</a></td>
+		<td><a> [f] peek</a></td>
+		<td><a> [f] read</a></td>
+		<td><a> [f] set</a></td>
+		<td><a> [f] write</a></td>
+	</tr>
+</table>
+<p><a href='#toc'>^</a></p><BR /><BR /><p> Query: ;; Load Modules: Functions Suspended, Functions Restored, ok, Main; Dump Tables: ok, Dump Functions: ok, Common Branches: ok, Sorting Branches: ok, Print TOC: 12 ok, Print Functions: 189 ok, DONE</p>

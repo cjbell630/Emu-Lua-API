@@ -87,9 +87,9 @@ persist
 }]]
 
 for k, v in pairs(savestate) do
-    print(k)
+    print(k.." "..tostring(v).."\n")
 end
-file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.html", "w+")
+file = io.open("D:\\cb106\\Documents\\GitHub\\Emu-Lua-API\\output.html", "w+")
 file:write("<html><head><style>table {border-collapse: collapse;width: 100%;border: 1px solid black;}th, td {text-align: left;padding: 8px;border: 1px solid black;}tr:nth-child(even) {background-color: #d0d0d0;border: 1px solid black;}</style></head><body><table style=\"width:100%\">")
 file:close()
 file = io.open("D:\\cb106\\Documents\\GitHub\\FCEUX-Lua-API\\output.html", "a")

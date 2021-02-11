@@ -5,10 +5,6 @@
 ---@module emu Contains functions for interacting with the emulator.
 emu = {}
 
----Executes a power cycle.
-function emu.poweron()
-end
-
 ---Executes a (soft) reset.
 function emu.softreset()
 end
